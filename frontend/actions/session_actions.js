@@ -13,6 +13,7 @@ export const receiveErrors = errors => ({
   errors
 });
 
+//createNewUser
 export const signup = user => dispatch => (
   APIUtil.signup(user).then(signedUpUser => (
     dispatch(receiveCurrentUser(signedUpUser))
