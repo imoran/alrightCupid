@@ -1,4 +1,7 @@
 class Api::UsersController < ApplicationController
+  #hooks to protect against accessing data api endpoints
+  before_action :require_login
+  
   def index
     @users = User.all
     render 'api/users/index'
