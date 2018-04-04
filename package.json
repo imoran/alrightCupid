@@ -12,7 +12,7 @@
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
-    "webpack": "^4.5.0"
+    "webpack": "^3.4.1"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
@@ -23,7 +23,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack --watch"
+    "start": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -35,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/imoran/alrightCupid/issues"
   },
-  "homepage": "https://github.com/imoran/alrightCupid#readme"
+  "homepage": "https://github.com/imoran/alrightCupid#readme",
+  "devDependencies": {
+    "webpack-cli": "^2.0.13"
+  }
 }
