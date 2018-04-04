@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import merge from 'lodash/merge';
 
 class Signup extends React.Component {
   constructor(props) {
@@ -10,38 +12,47 @@ class Signup extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleInput(type) {
+  update(field) {
     return (e) => {
-      this.setState({[type]: e.target.value});
+      this.setState({[field]: e.target.value});
     };
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.signup(this.state)
+    const user = merge({}, this.state);
+    this.props.processForm(user)
     .then(() => this.props.history.push('/'));
   }
+
+  // renderErrors() {
+  //   return (
+  //     <ul>
+  //
+  //     </ul>
+  //   );
+  // }
 
   render() {
     return (
       <div>
         <h1>Sign Up!</h1>
-        <form onClick={this.handleSubmit}>
-          <label>Username
+        <form onSubmit={this.handleSubmit}>
+          <label>Username:
             <input
               type="text"
               value={this.state.username}
-              onChange={this.handleInput('username')}
+              onChange={this.update('username')}
               />
           </label>
-            <label>Password
+            <label>Password:
             <input
               type="password"
               value={this.state.password}
-              onChange={this.handleInput('password')}
+              onChange={this.update('password')}
               />
             </label>
-            <button>Sign Up!</button>
+            <input type="submit" value={this.props.formType} />
         </form>
       </div>
     );
