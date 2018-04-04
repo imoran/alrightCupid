@@ -10,22 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180403212542) do
+ActiveRecord::Schema.define(version: 20180404200127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
-    t.float "latitude", null: false
-    t.float "longitude", null: false
-    t.integer "age", null: false
-    t.string "image_url", null: false
     t.string "password_digest", null: false
     t.string "session_token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["latitude", "longitude"], name: "index_users_on_latitude_and_longitude"
+    t.float "latitude", default: 37.7749, null: false
+    t.float "longitude", default: 122.4194, null: false
+    t.integer "age", default: 24, null: false
+    t.string "image_url", default: "https://vignette.wikia.nocookie.net/spongebob/images/a/ac/Spongebobwithglasses.jpeg/revision/latest?cb=20121014113150", null: false
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
   end
