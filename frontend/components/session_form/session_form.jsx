@@ -2,9 +2,10 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
-class Signup extends React.Component {
+class SessionForm extends React.Component {
   constructor(props) {
     super(props);
+    console.log(this.props);
     this.state = {
       username: '',
       password: ''
@@ -25,19 +26,25 @@ class Signup extends React.Component {
     .then(() => this.props.history.push('/'));
   }
 
-  // renderErrors() {
-  //   return (
-  //     <ul>
-  //
-  //     </ul>
-  //   );
-  // }
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
 
   render() {
     return (
       <div>
-        <h1>Sign Up!</h1>
         <form onSubmit={this.handleSubmit}>
+          <h1>{this.props.formType}</h1>
+          Please {this.props.formType} or {this.props.navLink}
+        <br />
           <label>Username:
             <input
               type="text"
@@ -45,6 +52,7 @@ class Signup extends React.Component {
               onChange={this.update('username')}
               />
           </label>
+          <br />
             <label>Password:
             <input
               type="password"
@@ -52,6 +60,7 @@ class Signup extends React.Component {
               onChange={this.update('password')}
               />
             </label>
+            <br />
             <input type="submit" value={this.props.formType} />
         </form>
       </div>
@@ -59,4 +68,4 @@ class Signup extends React.Component {
   }
 }
 
-export default Signup;
+export default withRouter(SessionForm);
