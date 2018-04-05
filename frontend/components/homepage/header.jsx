@@ -1,18 +1,18 @@
 import React from 'react';
-import GreetingContainer from '../greeting/greeting_container';
 
 class Header extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {
     return (
       <header className="home-page-header">
+        {console.log(this.props)}
         <div>Logo</div>
         <div className="home-page-header-account">
           <p>Have an account?</p>
-          <div className="home-page-signin">Sign in</div>
+          <button onClick={() => this.props.openModal('login')}>Sign in</button>
         </div>
       </header>
     );
