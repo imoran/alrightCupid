@@ -8,7 +8,6 @@ class Header extends React.Component {
   render() {
     return (
       <header className="home-page-header">
-        {console.log(this.props)}
         <div>Logo</div>
         <div className="home-page-header-account">
           <p>Have an account?</p>

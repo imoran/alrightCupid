@@ -2,7 +2,7 @@ import React from 'react';
 import GreetingContainer from '../greeting/greeting_container';
 import HeaderContainer from './header_container';
 import Splash from './splash';
-import SignupSplash from './signup_splash';
+import SignupSplashContainer from './signup_splash_container';
 
 
 
@@ -16,7 +16,7 @@ class HomePage extends React.Component {
       <div className="home-page-color">
         <HeaderContainer />
         <Splash />
-        <SignupSplash />
+        <SignupSplashContainer />
       </div>
 
     );

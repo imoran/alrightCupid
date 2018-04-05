@@ -99,5 +99,5 @@ select {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   color: white;
-
+  border: none;
 }
