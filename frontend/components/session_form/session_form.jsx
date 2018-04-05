@@ -28,7 +28,7 @@ class SessionForm extends React.Component {
   renderErrors() {
     return (
       <ul>
-        {this.props.errors.session.map((error, i) => (
+        {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
           </li>
@@ -43,6 +43,7 @@ class SessionForm extends React.Component {
 
         <form className="modal_form" onSubmit={this.handleSubmit}>
           <h1>{this.props.formType}</h1>
+          {this.renderErrors()}
         <br />
           <span className="input">
             <input
