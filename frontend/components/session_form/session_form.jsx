@@ -5,7 +5,6 @@ import merge from 'lodash/merge';
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
     this.state = {
       username: '',
       password: ''
@@ -29,7 +28,7 @@ class SessionForm extends React.Component {
   renderErrors() {
     return (
       <ul>
-        {this.props.errors.map((error, i) => (
+        {this.props.errors.session.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
           </li>
@@ -41,7 +40,8 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div>
-        <form className="session_form" onSubmit={this.handleSubmit}>
+
+        <form className="modal_form" onSubmit={this.handleSubmit}>
           <h1>{this.props.formType}</h1>
         <br />
           <span className="input">
@@ -62,7 +62,9 @@ class SessionForm extends React.Component {
                 />
             </span>
             <br />
-            <input type="submit" value={this.props.formType} />
+            <span className="submit">
+              <input type="submit" value={this.props.formType} />
+            </span>
         </form>
       </div>
     );
