@@ -1,33 +1,3 @@
 // Place all the styles related to the Api::Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-.modal_form {
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  margin-left: -220px;
-  width: 260px;
-  padding: 20px;
-  background: #fff;
-  z-index: 3;
-  border-radius: 5px;
-  border: 1px solid #000;
-}
-
-.input > input:hover {
-  border-color: green;
-}
-
-.submit {
-  margin: 20px 0 0 0;
-  padding: 0 0 3px 0;
-  position: relative;
-  padding: 10px 20px;
-  color: green;
-  background: #0c0;
-  font-weight: 700;
-  border-radius: 5px;
-  box-shadow: 0 3px 0 0 #070;
-}
