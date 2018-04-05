@@ -16,3 +16,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.modal_form {
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;        /* for single line flex container */
+  align-content: center;
+}
+
+.sign-in-input {
+
+ }

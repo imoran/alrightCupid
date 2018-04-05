@@ -22,7 +22,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = merge({}, this.state);
     this.props.processForm(user)
-    .then(() => this.props.history.push('/'));
+    .then(() => this.props.history.push('/dashboard'));
   }
 
   renderErrors() {
@@ -41,31 +41,28 @@ class SessionForm extends React.Component {
     return (
       <div>
         <form className="modal_form" onSubmit={this.handleSubmit}>
-          <h1>{this.props.formType}</h1>
-           <div onClick={this.props.closeModal} className="close-x">X</div>
           {this.renderErrors()}
         <br />
-          <span className="input">
+        <div className="sign-in-input">
+          <p>Sign in</p>
             <input
               type="text"
               value={this.state.username}
               onChange={this.update('username')}
               placeholder="Your username"
               />
-          </span>
-          <br />
-            <span className="input">
-              <input
-                type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                placeholder="Password"
-                />
-            </span>
             <br />
-            <span className="submit">
-              <input type="submit" value={this.props.formType} />
-            </span>
+            <input
+              type="password"
+              value={this.state.password}
+              onChange={this.update('password')}
+              placeholder="Password"
+              />
+          <br />
+          <span className="submit">
+            <input type="submit" value="Let's go" />
+          </span>
+        </div>
         </form>
       </div>
     );
