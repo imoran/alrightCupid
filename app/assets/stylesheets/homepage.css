@@ -38,7 +38,6 @@
   margin-top: 8px;
 }
 
-
 /* ================= */
 
 .home-page-splash {
@@ -57,4 +56,48 @@
 .home-page-splash div {
   width: 400px;
   font-size: 18px;
+}
+
+/* ================= */
+
+.signup-splash {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  margin: 25px auto;
+}
+
+.signup-splash p {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.signup-splash-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 300px
+}
+
+.signup-splash-dropdowns {
+  box-sizing: border-box;
+}
+
+select {
+  /* display: block; */
+  font-size: 17px;
+  line-height: 17px;
+  cursor: pointer;
+}
+
+.signup-splash-button , .signup-splash-dropdowns {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.signup-splash-button {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  color: white;
+
 }
