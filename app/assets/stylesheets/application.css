@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, p, form, label, article, aside, figure, figcaption, footer, header, nav {
+ html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, p, form, label, input, article, aside, figure, figcaption, footer, header, nav {
    margin: 0;
    padding: 0;
    border: 0;

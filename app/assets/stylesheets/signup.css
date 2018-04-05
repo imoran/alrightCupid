@@ -1,0 +1,41 @@
+.signup-form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
+
+.signup-form label {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.signup-form input {
+  height: 40px;
+  width: 400px;
+  border-radius: 4px;
+  margin-top: 5px;
+  padding: 3px;
+}
+
+.bday-dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  margin: 25px auto;
+}
+
+.bday-dropdown-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 300px
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 300px
+}

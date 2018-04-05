@@ -18,7 +18,6 @@ class HomePage extends React.Component {
         <Splash />
         <SignupSplashContainer />
       </div>
-
     );
   }
 }

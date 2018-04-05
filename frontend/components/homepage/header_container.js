@@ -5,7 +5,6 @@ import Header from './header';
 
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout()),
   openModal: modal => dispatch(openModal(modal))
 });
 
