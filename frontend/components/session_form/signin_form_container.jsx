@@ -6,7 +6,6 @@ import SigninForm from './signin_form';
 
 const mapStateToProps = ({ errors }) => ({
   errors: errors.session,
-  // user: ui.user
 });
 
 const mapDispatchToProps = dispatch => ({

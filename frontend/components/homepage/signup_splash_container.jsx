@@ -10,7 +10,6 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  signup: (user) => dispatch(signup(user)),
   action: user => dispatch(createANewUser(user))
 });
 
