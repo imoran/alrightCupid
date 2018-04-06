@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180404200127) do
+ActiveRecord::Schema.define(version: 20180406222858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,8 +25,16 @@ ActiveRecord::Schema.define(version: 20180404200127) do
     t.float "longitude", default: 122.4194, null: false
     t.integer "age", default: 24, null: false
     t.string "image_url", default: "https://vignette.wikia.nocookie.net/spongebob/images/a/ac/Spongebobwithglasses.jpeg/revision/latest?cb=20121014113150", null: false
+    t.string "gender"
+    t.string "orientation"
+    t.integer "zipcode"
+    t.string "location"
+    t.index ["age"], name: "index_users_on_age"
+    t.index ["gender"], name: "index_users_on_gender"
+    t.index ["orientation"], name: "index_users_on_orientation"
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
+    t.index ["zipcode"], name: "index_users_on_zipcode"
   end
 
 end
