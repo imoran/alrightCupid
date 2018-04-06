@@ -2,9 +2,10 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
-class SessionForm extends React.Component {
+class SigninForm extends React.Component {
   constructor(props) {
     super(props);
+    console.log(this.props);
     this.state = {
       username: '',
       password: ''
@@ -69,4 +70,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default withRouter(SessionForm);
+export default withRouter(SigninForm);

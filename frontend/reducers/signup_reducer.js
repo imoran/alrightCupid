@@ -1,16 +1,18 @@
-import { OPEN_MODAL, CLOSE_MODAL } from '../actions/modal_actions';
+import { CREATE_USER } from '../actions/signup_actions';
+import merge from 'lodash/merge';
 
 const initialState = {
-  orientation: null,
-  gender: null,
-  firstName: null
+  orientation: "",
+  gender: ""
 };
+
+
 export default function signupReducer(state = initialState, action) {
+  Object.freeze(state);
+  let newState;
   switch (action.type) {
-    case OPEN_MODAL:
-      return action.modal;
-    case CLOSE_MODAL:
-      return null;
+    case CREATE_USER:
+      return action.user;
     default:
       return state;
   }

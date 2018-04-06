@@ -14,13 +14,15 @@ class HomePage extends React.Component {
       // css: `${CSS[4]}`,
       currentIndex: 0
     };
-    this.applyCss = this.applyCss.bind(this)();
+  }
+
+  componentWillMount() {
+    this.applyCss();
   }
 
   applyCss() {
     setInterval(() => {
       let index = (this.state.currentIndex + 1) % (CSS.length);
-      console.log(index);
       this.setState({css: CSS[this.state.currentIndex],
             currentIndex:  index});
     }, 5000);

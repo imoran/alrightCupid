@@ -21,21 +21,21 @@
 }
 
 .home-page-couch {
-  background:url("https://cdn.okccdn.com/media/img/dtf/photos/couch.jpg")
+  background: url("https://cdn.okccdn.com/media/img/dtf/photos/couch.jpg")
   no-repeat scroll calc(100vw / 2) 50px #24d8f3;
   background-position:fixed;
   height: 72vh;
 }
 
 .home-page-eyemasks {
-  background:url("https://cdn.okccdn.com/media/img/dtf/photos/eyemasks.jpg")
+  background: url("https://cdn.okccdn.com/media/img/dtf/photos/eyemasks.jpg")
   no-repeat scroll calc(100vw / 2) 50px #21bd65;
   background-position:fixed;
   height: 72vh;
 }
 
 .home-page-facepaint {
-  background:url("https://cdn.okccdn.com/media/img/dtf/photos/facepaint.jpg")
+  background: url("https://cdn.okccdn.com/media/img/dtf/photos/facepaint.jpg")
   no-repeat scroll calc(100vw / 2) 50px #23c3fd;
   background-position:fixed;
   background-size: 600px;
@@ -43,7 +43,7 @@
 }
 
 .home-page-hands {
-  background:url("https://cdn.okccdn.com/media/img/dtf/photos/hands.jpg")
+  background: url("https://cdn.okccdn.com/media/img/dtf/photos/hands.jpg")
   no-repeat scroll calc(100vw / 2) 50px #f0a1c1;
   background-position:fixed;
   background-size: 800px;

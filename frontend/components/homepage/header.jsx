@@ -1,4 +1,6 @@
 import React from 'react';
+// import SigninForm from '../session_form/signin_form';
+// import { signin } from '../../actions/session_actions';
 
 class Header extends React.Component {
   constructor(props) {
