@@ -27,8 +27,18 @@ class SignUp extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let userAcct = merge({}, this.user, this.state);
-    console.log(userAcct);
+    let newUser = this.formatUser(userAcct);
+    console.log(newUser);
   }
+
+  formatUser(user) {
+    let year = user['year'];
+    ['month', 'day', 'year'].forEach(el => delete user[el]);
+    let currentYear = (new Date()).getFullYear();
+    user = merge(user, { age: currentYear - year});
+    return user;
+  }
+
 
   render() {
     return (
