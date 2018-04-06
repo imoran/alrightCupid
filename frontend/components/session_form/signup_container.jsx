@@ -3,8 +3,8 @@ import { signup } from '../../actions/session_actions';
 import React from 'react';
 import SignUp from './signup';
 
-const mapStateToProps = ({ errors }) => ({
-  errors: errors.session,
+const mapStateToProps = (state) => ({
+  errors: state.errors.session
 });
 
 const mapDispatchToProps = dispatch => ({

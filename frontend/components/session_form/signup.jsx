@@ -1,26 +1,35 @@
 import React from 'react';
 import HeaderContainer from '../homepage/header_container';
+import range from 'lodash/range';
 
 class SignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      location: '',
+      zipcode: ''
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
   }
 
   render() {
     return (
       <div className="home-page-color">
         <HeaderContainer />
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <section className="signup-form">
             <label>First Name</label>
             <br />
             <input
               type="text"
               placeholder="First name"
+              value={this.state.username}
               />
             <div className="bday-dropdown">
               <label>Birthdate</label>

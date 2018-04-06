@@ -20,10 +20,42 @@
   color: #000000b3;
 }
 
-.home-page-color {
-  background-color: #f0a1c1;
-  width: 100%;
-  height: 700px;
+.home-page-couch {
+  background:url("https://cdn.okccdn.com/media/img/dtf/photos/couch.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #24d8f3;
+  background-position:fixed;
+  height: 72vh;
+}
+
+.home-page-eyemasks {
+  background:url("https://cdn.okccdn.com/media/img/dtf/photos/eyemasks.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #21bd65;
+  background-position:fixed;
+  height: 72vh;
+}
+
+.home-page-facepaint {
+  background:url("https://cdn.okccdn.com/media/img/dtf/photos/facepaint.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #23c3fd;
+  background-position:fixed;
+  background-size: 600px;
+  height: 72vh;
+}
+
+.home-page-hands {
+  background:url("https://cdn.okccdn.com/media/img/dtf/photos/hands.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #f0a1c1;
+  background-position:fixed;
+  background-size: 800px;
+  height: 72vh;
+}
+
+.home-page-rose {
+  background:url("https://cdn.okccdn.com/media/img/dtf/photos/rose.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #ffc5e3;
+  background-position:fixed;
+  background-size: 900px;
+  height: 72vh;
 }
 
 .home-page-header-account {

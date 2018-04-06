@@ -12,6 +12,10 @@ class SignupSplash extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  handleChange(e) {
+    this.setState();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.history.push('/signup');
@@ -24,13 +28,13 @@ class SignupSplash extends React.Component {
           <p>YOU ARE A</p>
           <div className="signup-splash-group">
             <select>
-              <option>Straight</option>
+              <option defaultValue>Straight</option>
               <option>Gay</option>
               <option>Bisexual</option>
               <option>Other</option>
             </select>
             <select>
-              <option>Woman</option>
+              <option defaultValue>Woman</option>
               <option>Man</option>
               <option>Other</option>
             </select>
