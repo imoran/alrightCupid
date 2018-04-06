@@ -4,7 +4,8 @@ import React from 'react';
 import SignUp from './signup';
 
 const mapStateToProps = (state) => ({
-  errors: state.errors.session
+  errors: state.errors.session,
+  user: state.ui.signup
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -5,7 +5,6 @@ import { withRouter } from 'react-router-dom';
 class SignupSplash extends React.Component {
   constructor(props) {
     super(props);
-
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = this.props.user;
   }
@@ -30,14 +29,14 @@ class SignupSplash extends React.Component {
           <div className="signup-splash-group">
             <select value={this.state.orientation}
                     onChange={this.update('orientation')}>
-              <option defaultValue>Straight</option>
+              <option>Straight</option>
               <option>Gay</option>
               <option>Bisexual</option>
               <option>Other</option>
             </select>
             <select value={this.state.gender}
                     onChange={this.update('gender')}>
-              <option defaultValue>Woman</option>
+              <option>Woman</option>
               <option>Man</option>
               <option>Other</option>
             </select>

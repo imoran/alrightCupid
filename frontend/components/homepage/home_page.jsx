@@ -11,7 +11,6 @@ class HomePage extends React.Component {
     super();
     this.state = {
       css: `home-page-couch`,
-      // css: `${CSS[4]}`,
       currentIndex: 0
     };
   }

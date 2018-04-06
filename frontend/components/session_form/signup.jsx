@@ -1,21 +1,33 @@
 import React from 'react';
 import HeaderContainer from '../homepage/header_container';
 import range from 'lodash/range';
+import merge from 'lodash/merge';
 
 class SignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       username: '',
-      password: '',
-      location: '',
+      month: '',
+      day: '',
+      year: '',
+      location: 'United States',
       zipcode: ''
     };
+    this.user = this.props.user;
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  update(field) {
+    return (e) => {
+      this.setState({[field]: e.target.value});
+    };
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    let userAcct = merge({}, this.user, this.state);
+    console.log(userAcct);
   }
 
   render() {
@@ -30,40 +42,51 @@ class SignUp extends React.Component {
               type="text"
               placeholder="First name"
               value={this.state.username}
+              onChange={this.update('username')}
               />
             <div className="bday-dropdown">
               <label>Birthdate</label>
               <div className="bday-dropdown-group">
                 <br />
-                  <select>
+                  <select value={this.state.month}
+                          onChange={this.update('month')}>
                     <option>Month</option>
-                    <option>January</option>
-                    <option>February</option>
-                    <option>March</option>
+                    <option>Jan</option>
+                    <option>Feb</option>
+                    <option>Mar</option>
+                    <option>Apr</option>
+                    <option>May</option>
+                    <option>Jun</option>
+                    <option>Jul</option>
+                    <option>Aug</option>
+                    <option>Sep</option>
+                    <option>Oct</option>
+                    <option>Nov</option>
+                    <option>Dec</option>
                   </select>
-                  <select>
+                  <select value={this.state.day}
+                          onChange={this.update('day')}>
                     <option>Day</option>
-                    <option>01</option>
-                    <option>02</option>
+                    {range(1, 32).map(val => <option>{val}</option>)}
                   </select>
-                  <select>
+                  <select value={this.state.year}
+                          onChange={this.update('year')}>
                     <option>Year</option>
-                    <option>01</option>
-                    <option>02</option>
+                    {range(1919, 2011).reverse().map(val => <option>{val}</option>)}
                   </select>
                 </div>
                 </div>
                   <label>Location</label>
                   <div className="location">
-                  <select>
+                  <select value={this.state.location}
+                          onChange={this.update('location')}>
                     <option>United States</option>
-                    <option>January</option>
-                    <option>February</option>
-                    <option>March</option>
                   </select>
                   <input
                     type="text"
                     placeholder="Zipcode"
+                    value={this.state.zipcode}
+                    onChange={this.update('zipcode')}
                     />
               </div>
               <input type="submit" value="Next" />

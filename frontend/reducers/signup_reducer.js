@@ -2,8 +2,8 @@ import { CREATE_USER } from '../actions/signup_actions';
 import merge from 'lodash/merge';
 
 const initialState = {
-  orientation: "",
-  gender: ""
+  orientation: "Straight",
+  gender: "Woman"
 };
 
 
