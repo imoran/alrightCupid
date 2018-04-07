@@ -1,9 +1,11 @@
 class User < ApplicationRecord
   validates :username, :password_digest, :session_token, presence: true
   validates :age, :latitude, :longitude, :image_url, presence: true
+  validates :zipcode, presence: true
   validates :username, :session_token, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
-  before_validation :ensure_session_token
+  geocoded_by :zipcode
+  before_validation :ensure_session_token, :geocode
 
   attr_reader :password
 
