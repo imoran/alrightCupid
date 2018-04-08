@@ -37,22 +37,26 @@ class SignUp extends React.Component {
 
   errorHandling() {
     let {firstName, zipcode, month, day, year} = this.state;
+    let {name, zip, birth} = this.errors;
     this.errors.name = firstName.length === 0 ? ['Sorry, your name can’t be blank.'] : [];
     this.errors.zip = zipcode.length !== 5 ? ['Location is required.'] : [];
-    if (month === 'Month' && day === 'Day' && year === 'Year') {
+    if (month === 'Month' || day === 'Day' || year === 'Year') {
       this.errors.birth = ["Something's missing!"];
+    } else {
+      this.errors.birth = [];
     }
     this.forceUpdate();
     this.resetValidation();
+    return name || zip || birth;
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.errorHandling();
-
-    // let userAcct = merge({}, this.user, this.state);
-    // let newUser = this.formatUser(userAcct);
-    // console.log("userAcct => ", userAcct);
+    if (!this.errorHandling()) {
+      // let userAcct = merge({}, this.user, this.state);
+      // let newUser = this.formatUser(userAcct);
+      // console.log("userAcct => ", userAcct);
+    }
   }
 
 
