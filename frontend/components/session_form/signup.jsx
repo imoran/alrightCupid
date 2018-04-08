@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderContainer from '../homepage/header_container';
-import range from 'lodash/range';
+import list from '../dumb';
 import merge from 'lodash/merge';
 
 class SignUp extends React.Component {
@@ -8,7 +8,7 @@ class SignUp extends React.Component {
     super(props);
     this.state = {
       username: '',
-      month: '',
+      month: 'Month',
       day: '',
       year: '',
       location: 'United States',
@@ -58,31 +58,23 @@ class SignUp extends React.Component {
               <label>Birthdate</label>
               <div className="bday-dropdown-group">
                 <br />
+
                   <select value={this.state.month}
                           onChange={this.update('month')}>
-                    <option>Month</option>
-                    <option>Jan</option>
-                    <option>Feb</option>
-                    <option>Mar</option>
-                    <option>Apr</option>
-                    <option>May</option>
-                    <option>Jun</option>
-                    <option>Jul</option>
-                    <option>Aug</option>
-                    <option>Sep</option>
-                    <option>Oct</option>
-                    <option>Nov</option>
-                    <option>Dec</option>
+                    {list.months.map(month =>
+                      <option key={month} >{month}</option>)}
                   </select>
+
                   <select value={this.state.day}
-                          onChange={this.update('day')}>
-                    <option>Day</option>
-                    {range(1, 32).map(val => <option>{val}</option>)}
+                    onChange={this.update('day')}>
+                    {list.days[this.state.month].map(
+                      day => <option key={day} >{day}</option>)}
                   </select>
+
                   <select value={this.state.year}
                           onChange={this.update('year')}>
-                    <option>Year</option>
-                    {range(1919, 2011).reverse().map(val => <option>{val}</option>)}
+                    {list.year.map(val =>
+                      <option key={val} >{val}</option>)}
                   </select>
                 </div>
                 </div>

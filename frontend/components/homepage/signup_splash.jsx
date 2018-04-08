@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import list from '../dumb';
 
 
 class SignupSplash extends React.Component {
@@ -29,16 +30,11 @@ class SignupSplash extends React.Component {
           <div className="signup-splash-group">
             <select value={this.state.orientation}
                     onChange={this.update('orientation')}>
-              <option>Straight</option>
-              <option>Gay</option>
-              <option>Bisexual</option>
-              <option>Other</option>
+              {list.orientation.map(or => <option key={or}>{or}</option>)}
             </select>
             <select value={this.state.gender}
                     onChange={this.update('gender')}>
-              <option>Woman</option>
-              <option>Man</option>
-              <option>Other</option>
+              {list.gender.map(gen => <option key={gen}>{gen}</option>)}
             </select>
             <button className="signup-splash-button">Continue</button>
           </div>
