@@ -12,13 +12,13 @@ class SignUp extends React.Component {
       day: 'Day',
       year: 'Year',
       location: 'United States',
-      zipcode: ''
+      zipcode: '',
+      nameError: [],
+      zipError: [],
+      birthError: []
     };
-
-    this.user = this.props.user;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.errorHandling = this.errorHandling.bind(this);
-    this.resetValidation = this.resetValidation.bind(this)();
   }
 
   update(field) {
@@ -27,44 +27,37 @@ class SignUp extends React.Component {
     };
   }
 
-  resetValidation() {
-    this.errors = {
-      name: [],
-      zip: [],
-      birth: []
-    };
-  }
-
   errorHandling() {
     let {firstName, zipcode, month, day, year} = this.state;
-    let {name, zip, birth} = this.errors;
-    this.errors.name = firstName.length === 0 ? ['Sorry, your name can’t be blank.'] : [];
-    this.errors.zip = zipcode.length !== 5 ? ['Location is required.'] : [];
+    let nameError = firstName.length === 0 ? ['Sorry, your name can’t be blank.'] : [];
+    let zipError = zipcode.length !== 5 ? ['Location is required.'] : [];
+    let birthError = [];
     if (month === 'Month' || day === 'Day' || year === 'Year') {
-      this.errors.birth = ["Something's missing!"];
-    } else {
-      this.errors.birth = [];
+      birthError = ["Something's missing!"];
     }
-    this.forceUpdate();
-    this.resetValidation();
-    return name || zip || birth;
+    this.setState({nameError, zipError, birthError});
+    if (nameError.length === 0 ||
+        zipError.length === 0 ||
+        birthError.length === 0) {
+      return true;
+    }
+    return false;
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    if (!this.errorHandling()) {
-      // let userAcct = merge({}, this.user, this.state);
-      // let newUser = this.formatUser(userAcct);
-      // console.log("userAcct => ", userAcct);
+    if (this.errorHandling()) {
+      let newUser = this.formatUser();
+      console.log("newUser => ", newUser);
     }
   }
 
-
-  formatUser(user) {
-    let year = user['year'];
-    ['month', 'day', 'year'].forEach(el => delete user[el]);
+  formatUser() {
+    let {firstName, zipcode, location, year} = this.state;
+    let {gender, orientation} = this.props.user;
     let currentYear = (new Date()).getFullYear();
-    user = merge(user, { age: currentYear - year});
+    let age = (currentYear - year);
+    let user = {firstName, zipcode, location, gender, orientation, age};
     return user;
   }
 
@@ -82,7 +75,7 @@ class SignUp extends React.Component {
               value={this.state.firstName}
               onChange={this.update('firstName')}
               />
-            {Validation(this.errors.name)}
+            {Validation(this.state.nameError)}
             <div className="bday-dropdown">
               <label>Birthdate</label>
               <div className="bday-dropdown-group">
@@ -106,7 +99,7 @@ class SignUp extends React.Component {
                       <option key={val} >{val}</option>)}
                   </select>
                 </div>
-                {Validation(this.errors.birth)}
+                {Validation(this.state.birthError)}
                 </div>
                   <label>Location</label>
                   <div className="location">
@@ -121,7 +114,7 @@ class SignUp extends React.Component {
                     onChange={this.update('zipcode')}
                     />
               </div>
-              {Validation(this.errors.zip)}
+              {Validation(this.state.zipError)}
               <input type="submit" value="Next" />
           </section>
         </form>
