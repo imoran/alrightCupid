@@ -1,11 +1,11 @@
 import React from 'react';
-import HeaderContainer from '../homepage/header_container';
-import list from '../signup_data';
+import list from './signup_data';
 import merge from 'lodash/merge';
 
-class SignUp extends React.Component {
+export default class SignUp2 extends React.Component {
   constructor(props) {
     super(props);
+    console.log(this.props);
     this.state = {
       firstName: '',
       month: 'Month',
@@ -48,7 +48,8 @@ class SignUp extends React.Component {
     e.preventDefault();
     if (this.errorHandling()) {
       let newUser = this.formatUser();
-      console.log("newUser => ", newUser);
+      this.props.action(newUser);
+      this.props.nextStep();
     }
   }
 
@@ -64,7 +65,6 @@ class SignUp extends React.Component {
   render() {
     return (
       <div className="home-page-color">
-        <HeaderContainer />
         <form onSubmit={this.handleSubmit}>
           <section className="signup-form">
             <label>First Name</label>
@@ -130,7 +130,3 @@ const Validation = (errors) => {
     </ul>
   );
 };
-
-
-
-export default SignUp;

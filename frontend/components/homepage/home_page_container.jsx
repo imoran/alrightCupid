@@ -2,8 +2,9 @@ import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import HomePage from './home_page';
 
-const mapStateToProps = ({ session }) => ({
-  currentUser: session.currentUser
+const mapStateToProps = (state) => ({
+  currentUser: state.session.currentUser,
+  step: state.ui.step
 });
 
 const mapDispatchToProps = dispatch => ({

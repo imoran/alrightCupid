@@ -1,10 +1,6 @@
 import React from 'react';
 
-class Splash extends React.Component {
-  constructor() {
-    super();
-  }
-
+export default class Splash extends React.Component {
   render() {
     return (
       <section className="home-page-splash">
@@ -22,5 +18,3 @@ class Splash extends React.Component {
     );
   }
 }
-
-export default Splash;

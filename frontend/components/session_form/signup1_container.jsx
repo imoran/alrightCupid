@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { signup } from '../../actions/session_actions';
 import { createANewUser } from '../../actions/signup_actions';
-import SignupSplash from './signup_splash';
+import Signup1 from './signup1';
 
 
 const mapStateToProps = (state) => ({
@@ -13,4 +13,4 @@ const mapDispatchToProps = dispatch => ({
   action: user => dispatch(createANewUser(user))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignupSplash);
+export default connect(mapStateToProps, mapDispatchToProps)(Signup1);

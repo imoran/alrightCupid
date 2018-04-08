@@ -1,9 +1,8 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
-import list from '../signup_data';
+import list from './signup_data';
 
 
-class SignupSplash extends React.Component {
+export default class Signup1 extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,7 +18,8 @@ class SignupSplash extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.action(this.state);
-    this.props.history.push('/signup');
+    this.props.nextStep();
+    // this.props.history.push('/signup');
   }
 
   render() {
@@ -43,6 +43,3 @@ class SignupSplash extends React.Component {
     );
   }
 }
-
-
-export default withRouter(SignupSplash);
