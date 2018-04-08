@@ -22,9 +22,7 @@ class SigninForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = merge({}, this.state);
-    this.props.signin(user)
-    .then(this.props.closeModal);
-    this.props.history.push('/dashboard');
+    this.props.signin(user);
   }
 
   renderErrors() {

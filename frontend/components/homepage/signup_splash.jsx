@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import list from '../dumb';
+import list from '../signup_data';
 
 
 class SignupSplash extends React.Component {

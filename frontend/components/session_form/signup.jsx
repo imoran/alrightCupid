@@ -1,21 +1,24 @@
 import React from 'react';
 import HeaderContainer from '../homepage/header_container';
-import list from '../dumb';
+import list from '../signup_data';
 import merge from 'lodash/merge';
 
 class SignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
+      firstName: '',
       month: 'Month',
-      day: '',
-      year: '',
+      day: 'Day',
+      year: 'Year',
       location: 'United States',
       zipcode: ''
     };
+
     this.user = this.props.user;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.errorHandling = this.errorHandling.bind(this);
+    this.resetValidation = this.resetValidation.bind(this)();
   }
 
   update(field) {
@@ -24,12 +27,34 @@ class SignUp extends React.Component {
     };
   }
 
+  resetValidation() {
+    this.errors = {
+      name: [],
+      zip: [],
+      birth: []
+    };
+  }
+
+  errorHandling() {
+    let {firstName, zipcode, month, day, year} = this.state;
+    this.errors.name = firstName.length === 0 ? ['Sorry, your name can’t be blank.'] : [];
+    this.errors.zip = zipcode.length !== 5 ? ['Location is required.'] : [];
+    if (month === 'Month' && day === 'Day' && year === 'Year') {
+      this.errors.birth = ["Something's missing!"];
+    }
+    this.forceUpdate();
+    this.resetValidation();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
-    let userAcct = merge({}, this.user, this.state);
-    let newUser = this.formatUser(userAcct);
-    console.log(newUser);
+    this.errorHandling();
+
+    // let userAcct = merge({}, this.user, this.state);
+    // let newUser = this.formatUser(userAcct);
+    // console.log("userAcct => ", userAcct);
   }
+
 
   formatUser(user) {
     let year = user['year'];
@@ -38,7 +63,6 @@ class SignUp extends React.Component {
     user = merge(user, { age: currentYear - year});
     return user;
   }
-
 
   render() {
     return (
@@ -51,9 +75,10 @@ class SignUp extends React.Component {
             <input
               type="text"
               placeholder="First name"
-              value={this.state.username}
-              onChange={this.update('username')}
+              value={this.state.firstName}
+              onChange={this.update('firstName')}
               />
+            {Validation(this.errors.name)}
             <div className="bday-dropdown">
               <label>Birthdate</label>
               <div className="bday-dropdown-group">
@@ -77,6 +102,7 @@ class SignUp extends React.Component {
                       <option key={val} >{val}</option>)}
                   </select>
                 </div>
+                {Validation(this.errors.birth)}
                 </div>
                   <label>Location</label>
                   <div className="location">
@@ -91,6 +117,7 @@ class SignUp extends React.Component {
                     onChange={this.update('zipcode')}
                     />
               </div>
+              {Validation(this.errors.zip)}
               <input type="submit" value="Next" />
           </section>
         </form>
@@ -98,5 +125,15 @@ class SignUp extends React.Component {
     );
   }
 }
+
+const Validation = (errors) => {
+  return (
+    <ul>
+      {errors.map(error => <li key={error}>{error}</li>)}
+    </ul>
+  );
+};
+
+
 
 export default SignUp;
