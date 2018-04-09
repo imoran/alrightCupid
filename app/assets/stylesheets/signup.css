@@ -77,13 +77,14 @@
 .signup2-form {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
 
 .signup2-form label {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 14px;
+  margin-bottom: 5px;
+  margin-top: 20px;
 }
 
 .signup2-form-firstname {
@@ -120,6 +121,7 @@
   font-size: 16px;
   font-weight: lighter;
   width: 135px;
+  margin-top: 30px;
 }
 
 .signup2-facebook {
@@ -147,4 +149,65 @@
 
 .signup2-facebook div {
   font-size: 17px;
+}
+
+
+/* ======== Signup 3 ========= */
+
+.signup3-body {
+  height: 45em;
+}
+
+.signup3-main-title {
+  width: 900px;
+  margin: 40px auto;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+
+.signup3-form {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  margin: 40px auto;
+}
+
+.signup3-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup3-form label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.signup3-inputs input {
+  background-color: white;
+  border-radius: 4px;
+  padding: 9px;
+  width: 200px;
+}
+
+.signup3-form > input {
+  padding: 11px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: lighter;
+  width: 200px;
+  margin-top: 45px;
+  margin-bottom: 5px;
+}
+
+.signup3-form p {
+  font-size: 13px;
+}
+
+.signup3-inputs .signup3-password-input {
+  width: 250px;
 }

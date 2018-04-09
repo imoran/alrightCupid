@@ -20,6 +20,14 @@
   color: #000000b3;
 }
 
+.home-page-footer {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  width: 900px;
+  margin: 0 auto;
+}
+
 .home-page-couch {
   background: url("https://cdn.okccdn.com/media/img/dtf/photos/couch.jpg")
   no-repeat scroll calc(100vw / 2) 50px #24d8f3;

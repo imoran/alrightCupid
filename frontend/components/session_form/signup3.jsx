@@ -54,30 +54,32 @@ export default class SignUp3 extends React.Component {
 
   render() {
     return (
-      <div style={{backgroundColor:this.props.css}}>
+      <div style={{backgroundColor:this.props.css}} className="signup3-body">
         <HeaderContainer />
-        <form onSubmit={this.handleSubmit}>
-          <label>Username</label>
-          <br />
-          <input
-            type="text"
-            placeholder="e.g example@url.com"
-            value={this.state.username}
-            onChange={this.update('username')}
-            />
-          {Validation(this.state.usernameError)}
-          <br />
-          <label>Password</label>
-          <br />
-          <input
-            type="text"
-            placeholder="6 characters minimum."
-            value={this.state.password}
-            onChange={this.update('password')}
-            />
-          {Validation(this.state.passwordError)}
-          <br />
-          <input type="submit" value="Next" />
+        <div className="signup3-main-title">Ahh, the last step. Don’t stop now!</div>
+        <form onSubmit={this.handleSubmit} className="signup3-form">
+          <div className="signup3-inputs">
+            <label>Email</label>
+            <input
+              type="text"
+              placeholder="e.g example@url.com"
+              value={this.state.username}
+              onChange={this.update('username')}
+              />
+            {Validation(this.state.usernameError)}
+            <br />
+            <label>Password</label>
+            <input
+              type="text"
+              placeholder="6 characters minimum."
+              value={this.state.password}
+              onChange={this.update('password')}
+              className="signup3-password-input"
+              />
+            {Validation(this.state.passwordError)}
+          </div>
+          <input type="submit" value="Done!" />
+          <p>By signing up you agree to our <u>Terms of Service</u> & <u>Privacy Policy</u>.</p>
         </form>
       </div>
     );

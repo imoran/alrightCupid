@@ -1,6 +1,7 @@
 import React from 'react';
 import GreetingContainer from '../greeting/greeting_container';
 import HeaderContainer from './header_container';
+import { Footer } from './footer';
 import Splash from './splash';
 import SignUp1 from '../session_form/signup1_container';
 import SignUp2 from '../session_form/signup2_container';
@@ -66,7 +67,7 @@ export default class HomePage extends React.Component {
     return (
       <div>
         {this.multiStep()}
-        <div>Footer</div>
+        <Footer />
       </div>
     );
   }
