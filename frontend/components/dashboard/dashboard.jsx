@@ -3,8 +3,9 @@ import DashboardHeader from './dashboard_header';
 import Featured from './dashboard_featured';
 
 export default class Dashboard extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    console.log("Dashboard props =>", this.props);
   }
 
   render() {

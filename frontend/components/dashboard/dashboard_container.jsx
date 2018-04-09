@@ -3,9 +3,11 @@ import { connect } from 'react-redux';
 import Dashboard from './dashboard';
 import { logout } from '../../actions/session_actions';
 
-const mapStateToProps = ({ errors }) => ({
-  errors: errors.session,
-});
+
+const mapStateToProps = state => {
+  console.log("state =>", state);
+};
+
 
 const mapDispatchToProps = dispatch => ({
   logout: user => dispatch(logout(user))

@@ -3,8 +3,9 @@ import React from 'react';
 export default class DashboardHeader extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this);
   }
+
+
 
   render() {
     return (
