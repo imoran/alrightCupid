@@ -24,18 +24,14 @@
   background: url("https://cdn.okccdn.com/media/img/dtf/photos/couch.jpg")
   no-repeat scroll calc(100vw / 2) 50px #24d8f3;
   background-position:fixed;
-  height: 72vh;
-}
-.couch {
-  background-color: #24d8f3;
-  height: 72vh;
+  height: 45em;
 }
 
 .home-page-eyemasks {
   background: url("https://cdn.okccdn.com/media/img/dtf/photos/eyemasks.jpg")
   no-repeat scroll calc(100vw / 2) 50px #21bd65;
   background-position:fixed;
-  height: 72vh;
+  height: 45em;
 }
 
 .home-page-facepaint {
@@ -43,7 +39,7 @@
   no-repeat scroll calc(100vw / 2) 50px #23c3fd;
   background-position:fixed;
   background-size: 600px;
-  height: 72vh;
+  height: 45em;
 }
 
 .home-page-hands {
@@ -51,7 +47,7 @@
   no-repeat scroll calc(100vw / 2) 50px #f0a1c1;
   background-position:fixed;
   background-size: 800px;
-  height: 72vh;
+  height: 45em;
 }
 
 .home-page-rose {
@@ -59,7 +55,7 @@
   no-repeat scroll calc(100vw / 2) 50px #ffc5e3;
   background-position:fixed;
   background-size: 900px;
-  height: 72vh;
+  height: 45em;
 }
 
 .home-page-header-account {
@@ -92,48 +88,4 @@
 .home-page-splash div {
   width: 400px;
   font-size: 18px;
-}
-
-/* ================= */
-
-.signup-splash {
-  display: flex;
-  flex-direction: column;
-  width: 900px;
-  margin: 25px auto;
-}
-
-.signup-splash p {
-  font-weight: bold;
-  font-size: 13px;
-}
-
-.signup-splash-group {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 300px
-}
-
-.signup-splash-dropdowns {
-  box-sizing: border-box;
-}
-
-select {
-  /* display: block; */
-  font-size: 17px;
-  line-height: 17px;
-  cursor: pointer;
-}
-
-.signup-splash-button , .signup-splash-dropdowns {
-  font-size: 20px;
-  padding: 10px;
-}
-
-.signup-splash-button {
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 4px;
-  color: white;
-  border: none;
 }

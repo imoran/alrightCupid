@@ -19,15 +19,14 @@ export default class SignUp1 extends React.Component {
     e.preventDefault();
     this.props.updateUserInfo(this.state);
     this.props.nextStep();
-    // this.props.history.push('/signup');
   }
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <section className="signup-splash">
+        <section className="signup1">
           <p>YOU ARE A</p>
-          <div className="signup-splash-group">
+          <div className="signup1-group">
             <select value={this.state.orientation}
                     onChange={this.update('orientation')}>
               {list.orientation.map(or => <option key={or}>{or}</option>)}
@@ -36,7 +35,7 @@ export default class SignUp1 extends React.Component {
                     onChange={this.update('gender')}>
               {list.gender.map(gen => <option key={gen}>{gen}</option>)}
             </select>
-            <button className="signup-splash-button">Continue</button>
+            <button className="signup1-button">Continue</button>
           </div>
         </section>
       </form>

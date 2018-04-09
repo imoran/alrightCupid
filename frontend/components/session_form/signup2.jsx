@@ -1,6 +1,9 @@
 import React from 'react';
 import list from './signup_data';
 import merge from 'lodash/merge';
+import HeaderContainer from '../homepage/header_container';
+
+
 
 export default class SignUp2 extends React.Component {
   constructor(props) {
@@ -61,62 +64,65 @@ export default class SignUp2 extends React.Component {
     return user;
   }
 
+  selectMod(List, target, str) {
+    return (
+      <select value={target}
+        className="signup2-form-select"
+        onChange={this.update(str)}>
+        {List.map(
+          l => <option key={l} >{l}</option>)}
+        </select>
+    );
+  }
+
   render() {
     return (
-      <div style={{backgroundColor:this.props.css}}>
-        <form onSubmit={this.handleSubmit}>
-          <section className="signup-form">
+      <div style={{backgroundColor:this.props.css}} className="signup2-body">
+        <HeaderContainer />
+        <div className="signup2-main-title">Almost there! Just a little more to go.</div>
+        <div className="signup2-main-body">
+          <div className="signup2-facebook">
+            <div>Sign up faster.</div>
+            <div>We never post to Facebook.</div>
+            <button>Connect</button>
+          </div>
+          <div className="signup2-vertical">
+            <div className="signup2-vertical-line"></div>
+            <div className="signup2-or">OR</div>
+            <div className="signup2-vertical-line"></div>
+          </div>
+          <form onSubmit={this.handleSubmit} className="signup2-form">
             <label>First Name</label>
-            <br />
             <input
+              className="signup2-form-firstname"
               type="text"
               placeholder="First name"
               value={this.state.first_name}
               onChange={this.update('first_name')}
               />
             {Validation(this.state.nameError)}
-            <div className="bday-dropdown">
-              <label>Birthdate</label>
-              <div className="bday-dropdown-group">
-                <br />
-
-                  <select value={this.state.month}
-                          onChange={this.update('month')}>
-                    {list.months.map(month =>
-                      <option key={month} >{month}</option>)}
-                  </select>
-
-                  <select value={this.state.day}
-                    onChange={this.update('day')}>
-                    {list.days[this.state.month].map(
-                      day => <option key={day} >{day}</option>)}
-                  </select>
-
-                  <select value={this.state.year}
-                          onChange={this.update('year')}>
-                    {list.year.map(val =>
-                      <option key={val} >{val}</option>)}
-                  </select>
-                </div>
-                {Validation(this.state.birthError)}
-                </div>
-                  <label>Location</label>
-                  <div className="location">
-                  <select value={this.state.location}
-                          onChange={this.update('location')}>
-                    <option>United States</option>
-                  </select>
-                  <input
-                    type="text"
-                    placeholder="Zipcode"
-                    value={this.state.zipcode}
-                    onChange={this.update('zipcode')}
-                    />
-              </div>
-              {Validation(this.state.zipError)}
-              <input type="submit" value="Next" />
-          </section>
-        </form>
+            <label>Birthdate</label>
+            <div>
+              {this.selectMod(list.months, this.state.month, 'month')}
+              {this.selectMod(list.days[this.state.month], this.state.day, 'day')}
+              {this.selectMod(list.years, this.state.year, 'year')}
+            </div>
+            {Validation(this.state.birthError)}
+            <label>Location</label>
+            <div>
+              {this.selectMod(list.countries, this.state.location, 'location')}
+              <input
+                className="signup2-form-zipcode"
+                type="text"
+                placeholder="Zipcode"
+                value={this.state.zipcode}
+                onChange={this.update('zipcode')}
+                />
+            </div>
+            {Validation(this.state.zipError)}
+            <input type="submit" value="Next" className="signup2-form-next"/>
+          </form>
+        </div>
       </div>
     );
   }

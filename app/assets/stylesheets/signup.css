@@ -1,41 +1,150 @@
-.signup-form {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px;
-}
+/* ======== Signup 1 ========= */
 
-.signup-form label {
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-top: 5px;
-  font-size: 13px;
-}
-
-.signup-form input {
-  height: 40px;
-  width: 400px;
-  border-radius: 4px;
-  margin-top: 5px;
-  padding: 3px;
-}
-
-.bday-dropdown {
+.signup1 {
   display: flex;
   flex-direction: column;
   width: 900px;
   margin: 25px auto;
 }
 
-.bday-dropdown-group {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 300px
+.signup1 p {
+  font-weight: bold;
+  font-size: 13px;
 }
 
-.location {
+.signup1-group {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 300px
+}
+
+.signup1-group select {
+  margin-right: 10px;
+  font-size: 17px;
+  line-height: 17px;
+  cursor: pointer;
+  width: 135px;
+}
+
+.signup1-button {
+  padding: 13px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+
+
+
+/* ======== Signup 2 ========= */
+
+.signup2-body {
+  height: 45em;
+}
+
+.signup2-main-title {
+  width: 900px;
+  margin: 40px auto;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.signup2-main-body {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.signup2-vertical {
+  margin: 0 40px;
+}
+
+.signup2-vertical-line {
+  border: 0;
+  border-left: 2px solid black;
+  margin: 1em .5em;
+  min-height: 10em;
+}
+
+.signup2-or {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.signup2-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.signup2-form label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.signup2-form-firstname {
+  background-color: white;
+  border-radius: 4px;
+  padding: 9px;
+  width: 200px;
+}
+
+.signup2-form-select {
+  background-color: white;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  max-width: 150px;
+  min-width: 60px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.signup2-form-zipcode {
+  background-color: white;
+  border-radius: 4px;
+  padding: 9px;
+  width: 80px;
+}
+
+.signup2-form-next {
+  padding: 11px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: lighter;
+  width: 135px;
+}
+
+.signup2-facebook {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  top: -55px;
+}
+
+.signup2-facebook button {
+  background-color: #3260c7;
+  color: white;
+  font-weight: lighter;
+  font-size: 15px;
+  border: none;
+  border-radius: 3px;
+  padding: 12px;
+  width: 300px;
+}
+
+.signup2-facebook div:nth-child(2n){
+  margin-bottom: 1.6em;
+}
+
+.signup2-facebook div {
+  font-size: 17px;
 }

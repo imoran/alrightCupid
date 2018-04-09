@@ -1,5 +1,7 @@
 import React from 'react';
 import merge from 'lodash/merge';
+import HeaderContainer from '../homepage/header_container';
+
 
 
 export default class SignUp3 extends React.Component {
@@ -52,16 +54,18 @@ export default class SignUp3 extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>Username</label>
+      <div style={{backgroundColor:this.props.css}}>
+        <HeaderContainer />
+        <form onSubmit={this.handleSubmit}>
+          <label>Username</label>
           <br />
           <input
             type="text"
             placeholder="e.g example@url.com"
             value={this.state.username}
             onChange={this.update('username')}
-          />
-        {Validation(this.state.usernameError)}
+            />
+          {Validation(this.state.usernameError)}
           <br />
           <label>Password</label>
           <br />
@@ -70,11 +74,12 @@ export default class SignUp3 extends React.Component {
             placeholder="6 characters minimum."
             value={this.state.password}
             onChange={this.update('password')}
-          />
-        {Validation(this.state.passwordError)}
-        <br />
-        <input type="submit" value="Next" />
-      </form>
+            />
+          {Validation(this.state.passwordError)}
+          <br />
+          <input type="submit" value="Next" />
+        </form>
+      </div>
     );
   }
 }
