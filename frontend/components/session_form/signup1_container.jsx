@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
-import { signup } from '../../actions/session_actions';
-import { createANewUser } from '../../actions/signup_actions';
-import Signup1 from './signup1';
+import { updateUserInfo } from '../../actions/signup_actions';
+import SignUp1 from './signup1';
 
 
 const mapStateToProps = (state) => ({
@@ -10,7 +9,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  action: user => dispatch(createANewUser(user))
+  updateUserInfo: user => dispatch(updateUserInfo(user))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Signup1);
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp1);

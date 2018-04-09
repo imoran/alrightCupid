@@ -2,9 +2,9 @@ import React from 'react';
 import GreetingContainer from '../greeting/greeting_container';
 import HeaderContainer from './header_container';
 import Splash from './splash';
-import Signup1 from '../session_form/signup1_container';
-import Signup2 from '../session_form/signup2_container';
-import Signup3 from '../session_form/signup3';
+import SignUp1 from '../session_form/signup1_container';
+import SignUp2 from '../session_form/signup2_container';
+import SignUp3 from '../session_form/signup3_container';
 
 
 
@@ -36,14 +36,19 @@ export default class HomePage extends React.Component {
     switch (this.state.step) {
       case 1:
         return (
-          <div>
+          <div className={this.state.css}>
+            <HeaderContainer />
             <Splash />
-            <Signup1 nextStep={this.nextStep} />
+            <SignUp1 nextStep={this.nextStep} />
           </div>);
       case 2:
-        return <Signup2 nextStep={this.nextStep} />;
+        let color = COLOR[this.state.currentIndex];
+        return <SignUp2
+          nextStep={this.nextStep}
+          css={color}
+           />;
       case 3:
-        return <Signup3 />;
+        return <SignUp3 />;
       default:
         break;
     }
@@ -58,8 +63,7 @@ export default class HomePage extends React.Component {
 
   render() {
     return (
-      <div className={this.state.css}>
-        <HeaderContainer />
+      <div>
         {this.multiStep()}
       </div>
     );
@@ -73,3 +77,4 @@ const CSS = ['home-page-couch',
 'home-page-facepaint',
 'home-page-hands',
 'home-page-rose'];
+const COLOR = ['#24d8f3', '#21bd65', '#23c3fd', '#f0a1c1', '#ffc5e3'];

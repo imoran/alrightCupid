@@ -36,22 +36,3 @@ export default {
 		,"Turkey","Turkmenistan","Turks &amp; Caicos","Uganda","Ukraine","United Arab Emirates","United States Minor Outlying Islands","Uruguay","Uzbekistan","Venezuela","Vietnam","Virgin Islands (US)"
 		,"Yemen","Zambia","Zimbabwe"]
 };
-
-
-
-
-// days: {
-//   'Month': range(1, 32),
-//   'Jan': range(1, 32),
-//   'Feb': range(1, 29),
-//   'Mar': range(1, 32),
-//   'Apr': range(1, 31),
-//   'May': range(1, 32),
-//   'Jun': range(1, 31),
-//   'Jul': range(1, 32),
-//   'Aug': range(1, 32),
-//   'Sep': range(1, 31),
-//   'Oct': range(1, 32),
-//   'Nov': range(1, 31),
-//   'Dec': range(1, 32)
-// },

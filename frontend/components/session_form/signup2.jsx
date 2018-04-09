@@ -5,9 +5,8 @@ import merge from 'lodash/merge';
 export default class SignUp2 extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
     this.state = {
-      firstName: '',
+      first_name: '',
       month: 'Month',
       day: 'Day',
       year: 'Year',
@@ -28,16 +27,16 @@ export default class SignUp2 extends React.Component {
   }
 
   errorHandling() {
-    let {firstName, zipcode, month, day, year} = this.state;
-    let nameError = firstName.length === 0 ? ['Sorry, your name can’t be blank.'] : [];
+    let {first_name, zipcode, month, day, year} = this.state;
+    let nameError = first_name.length === 0 ? ['Sorry, your name can’t be blank.'] : [];
     let zipError = zipcode.length !== 5 ? ['Location is required.'] : [];
     let birthError = [];
     if (month === 'Month' || day === 'Day' || year === 'Year') {
       birthError = ["Something's missing!"];
     }
     this.setState({nameError, zipError, birthError});
-    if (nameError.length === 0 ||
-        zipError.length === 0 ||
+    if (nameError.length === 0 &&
+        zipError.length === 0 &&
         birthError.length === 0) {
       return true;
     }
@@ -48,23 +47,23 @@ export default class SignUp2 extends React.Component {
     e.preventDefault();
     if (this.errorHandling()) {
       let newUser = this.formatUser();
-      this.props.action(newUser);
+      this.props.updateUserInfo(newUser);
       this.props.nextStep();
     }
   }
 
   formatUser() {
-    let {firstName, zipcode, location, year} = this.state;
+    let {first_name, zipcode, location, year} = this.state;
     let {gender, orientation} = this.props.user;
     let currentYear = (new Date()).getFullYear();
     let age = (currentYear - year);
-    let user = {firstName, zipcode, location, gender, orientation, age};
+    let user = {first_name, zipcode, location, gender, orientation, age};
     return user;
   }
 
   render() {
     return (
-      <div className="home-page-color">
+      <div style={{backgroundColor:this.props.css}}>
         <form onSubmit={this.handleSubmit}>
           <section className="signup-form">
             <label>First Name</label>
@@ -72,8 +71,8 @@ export default class SignUp2 extends React.Component {
             <input
               type="text"
               placeholder="First name"
-              value={this.state.firstName}
-              onChange={this.update('firstName')}
+              value={this.state.first_name}
+              onChange={this.update('first_name')}
               />
             {Validation(this.state.nameError)}
             <div className="bday-dropdown">

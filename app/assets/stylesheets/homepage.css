@@ -26,6 +26,10 @@
   background-position:fixed;
   height: 72vh;
 }
+.couch {
+  background-color: #24d8f3;
+  height: 72vh;
+}
 
 .home-page-eyemasks {
   background: url("https://cdn.okccdn.com/media/img/dtf/photos/eyemasks.jpg")

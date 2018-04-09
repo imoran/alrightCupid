@@ -1,10 +1,10 @@
-export const CREATE_USER = 'CREATE_USER';
+export const UPDATE_USER = 'UPDATE_USER';
 
-export const createNewUser = user => ({
-  type: CREATE_USER,
+export const updateUser = user => ({
+  type: UPDATE_USER,
   user
 });
 
-export const createANewUser = user => dispatch => (
-  dispatch(createNewUser(user))
+export const updateUserInfo = user => dispatch => (
+  dispatch(updateUser(user))
 );

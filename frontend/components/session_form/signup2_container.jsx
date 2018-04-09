@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
-import { signup } from '../../actions/session_actions';
-import { createANewUser } from '../../actions/signup_actions';
+import { updateUserInfo } from '../../actions/signup_actions';
 import React from 'react';
 import SignUp2 from './signup2';
 
@@ -10,7 +9,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  action: user => dispatch(createANewUser(user))
+  updateUserInfo: user => dispatch(updateUserInfo(user))
 });
 
 

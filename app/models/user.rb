@@ -1,13 +1,15 @@
 class User < ApplicationRecord
   validates :username, :password_digest, :session_token, presence: true
-  validates :age, :latitude, :longitude, :image_url, presence: true
+  validates :age, :latitude, :longitude, presence: true
   validates :zipcode, presence: true
   validates :username, :session_token, uniqueness: true
+  validates :first_name, presence: true
   validates :password, length: { minimum: 6 }, allow_nil: true
   geocoded_by :zipcode
   before_validation :ensure_session_token, :geocode
 
   attr_reader :password
+  print User
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

@@ -2,7 +2,7 @@ import React from 'react';
 import list from './signup_data';
 
 
-export default class Signup1 extends React.Component {
+export default class SignUp1 extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,7 +17,7 @@ export default class Signup1 extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.action(this.state);
+    this.props.updateUserInfo(this.state);
     this.props.nextStep();
     // this.props.history.push('/signup');
   }
