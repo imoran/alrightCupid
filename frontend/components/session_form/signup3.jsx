@@ -1,10 +1,10 @@
 import React from 'react';
 import merge from 'lodash/merge';
 import HeaderContainer from '../homepage/header_container';
+import { withRouter } from 'react-router-dom';
 
 
-
-export default class SignUp3 extends React.Component {
+class SignUp3 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -39,9 +39,9 @@ export default class SignUp3 extends React.Component {
     e.preventDefault();
     if (this.errorHandling()) {
       let newUser = this.formatUser();
-      console.log("newUser => ", newUser);
-      let x = this.props.signup(newUser);
-      console.log("signup result => ", x);
+      this.props.signup(newUser)
+      .then(() => this.props.history.push('/dashboard'));
+      // error handling
     }
   }
 
@@ -93,3 +93,5 @@ const Validation = (errors) => {
     </ul>
   );
 };
+
+export default withRouter(SignUp3);
