@@ -41,12 +41,15 @@ export default class SignUp2 extends React.Component {
   }
 
   errorHandling() {
+    let currentYear = (new Date()).getFullYear();
     let {first_name, zipcode, month, day, year} = this.state;
     let nameError = first_name.length === 0 ? ['Sorry, your name can’t be blank.'] : [];
     let zipError = zipcode.length !== 5 ? ['Location is required.'] : [];
     let birthError = [];
     if (month === 'Month' || day === 'Day' || year === 'Year') {
       birthError = ["Something's missing!"];
+    } else if ((currentYear - year) < 18 ) {
+      birthError = ["You must be at least 18 years old to use AlrightCupid."];
     }
     this.setState({nameError, zipError, birthError});
     if (nameError.length === 0 &&

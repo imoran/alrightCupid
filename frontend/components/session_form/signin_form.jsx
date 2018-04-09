@@ -42,28 +42,31 @@ class SigninForm extends React.Component {
     return (
       <div>
         <form className="modal_form" onSubmit={this.handleSubmit}>
-          {this.renderErrors()}
         <br />
-        <div className="sign-in-input">
-          <p>Sign in</p>
-            <input
-              type="text"
-              value={this.state.username}
-              onChange={this.update('username')}
-              placeholder="Your username"
-              />
+          <div className="outer-signin">
+            <div className="signin-form">
+              <h2>Sign in</h2>
+              {this.renderErrors()}
+              <input
+                type="text"
+                value={this.state.username}
+                onChange={this.update('username')}
+                placeholder="Your username"
+                className="signin-username"
+                />
+              <br />
+              <input
+                type="password"
+                value={this.state.password}
+                onChange={this.update('password')}
+                placeholder="Password"
+                className="signin-password"
+                />
+              <br />
+              <button>Let's go!</button>
+            </div>
             <br />
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-              placeholder="Password"
-              />
-            <br />
-          <span className="submit">
-            <input type="submit" value="Let's go" />
-          </span>
-        </div>
+          </div>
         </form>
       </div>
     );

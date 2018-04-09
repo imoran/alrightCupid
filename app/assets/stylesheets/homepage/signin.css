@@ -1,0 +1,79 @@
+/* ================= */
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal_form {
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;        /* for single line flex container */
+  align-content: center;
+}
+
+
+/* ===========Sign in form ===========*/
+
+
+.outer-signin {
+  border-radius: 10px;
+  width: 200px;
+  height: 250px;
+  padding: 20px 30px;
+  background-color: #f3f5f9;
+  border-collapse: separate;
+}
+
+.signin-form {
+  width: 200px;
+  height: 250px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.signin-form h2 {
+  margin: 15px 0;
+}
+
+.signin-form input {
+  border: 1px solid #ccd0da;
+  margin-bottom: 10px;
+  line-height: 30px;
+  padding: 3px;
+  background-color: #ffffff;
+  font-size: 12px;
+  width: 180px;
+}
+
+
+.signin-form input:focus {
+  border: 2px solid #9dbaf2;
+  border-style:solid
+}
+
+
+.signin-form button {
+  border: none;
+  margin-top: 10px;
+  background-color: #4c7bd9;
+  color: white;
+  width: 180px;
+  height: 40px;
+  font-size: 12px;
+  font-weight: lighter;
+}
