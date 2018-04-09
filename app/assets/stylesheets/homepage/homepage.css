@@ -1,11 +1,3 @@
-.home-page-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px;
-  width: 900px;
-  margin: 0 auto;
-}
-
 .home-page-signin {
   padding: 8px 11px;
   border-radius: 3px;
@@ -96,4 +88,106 @@
 .home-page-splash div {
   width: 400px;
   font-size: 18px;
+}.home-page-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.home-page-signin {
+  padding: 8px 11px;
+  border-radius: 3px;
+  border: 1px solid black;
+  font-size: 0.7em;
+  font-weight: bold;
+  font-family: GT America,sans-serif;
+}
+
+.home-page-signin:hover {
+  cursor: pointer;
+  color: #000000b3;
+}
+
+.home-page-footer {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.home-page-couch {
+  background: url("https://cdn.okccdn.com/media/img/dtf/photos/couch.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #24d8f3;
+  background-position:fixed;
+  height: 45em;
+}
+
+.home-page-eyemasks {
+  background: url("https://cdn.okccdn.com/media/img/dtf/photos/eyemasks.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #21bd65;
+  background-position:fixed;
+  height: 45em;
+}
+
+.home-page-facepaint {
+  background: url("https://cdn.okccdn.com/media/img/dtf/photos/facepaint.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #23c3fd;
+  background-position:fixed;
+  background-size: 600px;
+  height: 45em;
+}
+
+.home-page-hands {
+  background: url("https://cdn.okccdn.com/media/img/dtf/photos/hands.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #f0a1c1;
+  background-position:fixed;
+  background-size: 800px;
+  height: 45em;
+}
+
+.home-page-rose {
+  background:url("https://cdn.okccdn.com/media/img/dtf/photos/rose.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #ffc5e3;
+  background-position:fixed;
+  background-size: 900px;
+  height: 45em;
+}
+
+.home-page-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  width: 900px;
+  margin: 0 auto;
+}
+
+
+/* ================= */
+
+.home-page-splash {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.home-page-splash h1 {
+  height: 108px;
+  text-indent: -9999px;
+  background-size: 470px auto;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.okccdn.com/media/img/dtf/title.png");
+}
+
+.home-page-splash div {
+  width: 400px;
+  font-size: 18px;
+}
+
+.demo-user {
+  font-size: 12px;
+  margin-top: 8px;
+  flex-direction: row;
+
 }
