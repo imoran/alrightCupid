@@ -1,7 +1,7 @@
 .slider-img img {
-  height: 120px;
-  width: 180px;
-
+  height: 160px;
+  width: 160px;
+  object-fit: cover;
 }
 
 .carousel {
