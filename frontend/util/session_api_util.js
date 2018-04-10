@@ -20,3 +20,17 @@ export const logout = () => {
     method: 'DELETE'
   });
 };
+
+export const getAllUsers = () => {
+  return $.ajax({
+    url: '/api/users',
+    method: 'GET'
+  });
+};
+
+export const getOneUser = id => {
+  return $.ajax({
+    url: `/api/users/${id}`,
+    method: 'GET'
+  });
+};
