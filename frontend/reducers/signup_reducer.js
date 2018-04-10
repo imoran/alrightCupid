@@ -1,5 +1,4 @@
 import { UPDATE_USER } from '../actions/signup_actions';
-import merge from 'lodash/merge';
 
 const initialState = {
   orientation: "Straight",

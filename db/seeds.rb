@@ -20,7 +20,8 @@ User.create!([{
     location: 'United States',
     age: 27,
     image_url: 'https://images.pexels.com/photos/818654/pexels-photo-818654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-    password: 'password'
+    password: 'password',
+    motto: 'Pretending I know what I\'m doing'
   },
   {
     first_name: "Marie",
@@ -31,7 +32,8 @@ User.create!([{
     location: "United States",
     age: 27,
     image_url: "https://images.pexels.com/photos/324658/pexels-photo-324658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    password: "password"
+    password: "password",
+    motto: 'Burning Man 2017'
   },
   {
     first_name: "Cassie",
@@ -42,8 +44,8 @@ User.create!([{
     location: "United States",
     age: 25,
     image_url: "https://images.pexels.com/photos/372042/pexels-photo-372042.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    password: "password"
-
+    password: "password",
+    motto: 'My true form'
   },
   {
     first_name: "Andrea",
@@ -54,7 +56,8 @@ User.create!([{
     location: "United States",
     age: 34,
     image_url: "https://images.pexels.com/photos/712521/pexels-photo-712521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    password: "password"
+    password: "password",
+    motto: 'Best Buddy!'
   },
   {
     first_name: "Marjorie",
@@ -65,7 +68,8 @@ User.create!([{
     location: "United States",
     age: 29,
     image_url: "https://images.pexels.com/photos/720327/pexels-photo-720327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    password: "password"
+    password: "password",
+    motto: 'I think this speaks for itself'
   },
   {
     first_name: "Monica",
@@ -76,7 +80,8 @@ User.create!([{
     location: "United States",
     age: 18,
     image_url: "https://images.pexels.com/photos/720598/pexels-photo-720598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    password: "password"
+    password: "password",
+    motto: 'Triangles yeah !'
   },
   {
     first_name: "Lana",
@@ -87,7 +92,8 @@ User.create!([{
     location: "United States",
     age: 26,
     image_url: "https://images.pexels.com/photos/594421/pexels-photo-594421.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    password: "password"
+    password: "password",
+    motto: 'I like places that require hard hats'
   },
   {
     first_name: "Melissa",
@@ -98,7 +104,8 @@ User.create!([{
     location: "United States",
     age: 39,
     image_url: "https://images.pexels.com/photos/354951/pexels-photo-354951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    password: "password"
+    password: "password",
+    motto: 'Tahoe 2015'
   },
   {
     first_name: "Carly",
@@ -109,7 +116,8 @@ User.create!([{
     location: "United States",
     age: 20,
     image_url: "https://images.pexels.com/photos/264614/pexels-photo-264614.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    password: "password"
+    password: "password",
+    motto: 'Being obnoxious'
   },
   {
     first_name: "Geraldine",
@@ -120,7 +128,8 @@ User.create!([{
     location: "United States",
     age: 36,
     image_url: "https://images.pexels.com/photos/109851/pexels-photo-109851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    password: "password"
+    password: "password",
+    motto: 'sick mirror door near work'
   },
   {
     first_name: "Julia",
@@ -131,7 +140,8 @@ User.create!([{
     location: "United States",
     age: 28,
     image_url: "https://images.pexels.com/photos/774095/pexels-photo-774095.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    password: "password"
+    password: "password",
+    motto: 'Metal'
   },
   {
     first_name: "Richard",
@@ -142,7 +152,8 @@ User.create!([{
     location: "United States",
     age: 29,
     image_url: "https://images.pexels.com/photos/826380/pexels-photo-826380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    password: "password"
+    password: "password",
+    motto: 'Not sure why I added this photo'
   },
   {
     first_name: "Noah",
@@ -153,7 +164,8 @@ User.create!([{
     location: "United States",
     age: 28,
     image_url: "https://images.pexels.com/photos/185847/pexels-photo-185847.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    password: "password"
+    password: "password",
+    motto: 'Books. Sleeping'
   },
   {
     first_name: "James",
@@ -164,7 +176,8 @@ User.create!([{
     location: "United States",
     age: 35,
     image_url: "https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    password: "password"
+    password: "password",
+    motto: 'Is any explanation needed?'
   },
   {
     first_name: "Rick",
@@ -175,7 +188,8 @@ User.create!([{
     location: "United States",
     age: 34,
     image_url: "https://images.pexels.com/photos/247917/pexels-photo-247917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    password: "password"
+    password: "password",
+    motto: 'rocking chair revolutionary'
   },
   {
     first_name: "Alexander",
@@ -186,7 +200,8 @@ User.create!([{
     location: "United States",
     age: 30,
     image_url: "https://images.pexels.com/photos/428333/pexels-photo-428333.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    password: "password"
+    password: "password",
+    motto: 'sunburn'
   },
   {
     first_name: "Jerry",
@@ -197,7 +212,8 @@ User.create!([{
     location: "United States",
     age: 24,
     image_url: "https://images.pexels.com/photos/274593/pexels-photo-274593.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    password: "password"
+    password: "password",
+    motto: 'Trying to make my friend look tall'
   },
   {
     first_name: "Jeremiah",
@@ -208,7 +224,8 @@ User.create!([{
     location: "United States",
     age: 27,
     image_url: "https://images.pexels.com/photos/434704/pexels-photo-434704.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    password: "password"
+    password: "password",
+    motto: 'Not my accordion )\':'
   },
   {
     first_name: "Johnathan",
@@ -219,7 +236,8 @@ User.create!([{
     location: "United States",
     age: 20,
     image_url: "https://images.pexels.com/photos/819482/pexels-photo-819482.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    password: "password"
+    password: "password",
+    motto: 'Trying to photograph a mongoose'
   },
   {
     first_name: "Connor",
@@ -230,7 +248,8 @@ User.create!([{
     location: "United States",
     age: 38,
     image_url: "https://images.pexels.com/photos/7823/selfie.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    password: "password"
+    password: "password",
+    motto: 'I habitually climb things'
   },
   {
     first_name: "Ethan",
@@ -241,9 +260,10 @@ User.create!([{
     location: "United States",
     age: 34,
     image_url: "https://images.pexels.com/photos/59576/pexels-photo-59576.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    password: "password"
+    password: "password",
+    motto: 'Sneaking some pets'
   }])
-  
+
 Question.create!([
 {
   category: "Colors",
@@ -389,7 +409,6 @@ question_19_response_1 = Answer.create!(question_id: question_19.id, response: "
 question_19_response_2 = Answer.create!(question_id: question_19.id, response: "No")
 question_20_response_1 = Answer.create!(question_id: question_20.id, response: "Yes")
 question_20_response_2 = Answer.create!(question_id: question_20.id, response: "No")
-
 
 User.all.each do |user|
   Question.all.each do |question|

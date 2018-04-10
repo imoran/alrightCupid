@@ -24,7 +24,7 @@ class SnapshotIndex extends React.Component {
               return(
               <div className="snapshot-slider-img">
                 <h3><img src={el.image_url} /></h3>
-                <div>Hello</div>
+                <p className="snapshot-caption">{el.motto}</p>
               </div>)
             })}
         </Slider>

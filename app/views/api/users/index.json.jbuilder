@@ -1,6 +1,6 @@
 @users.each do |user|
   json.set! user.id do
-    json.extract! user, :first_name
+    json.extract! user, :first_name, :motto
     json.image_url asset_path(user.image_url)
   end
 end

@@ -1,10 +1,22 @@
 .snapshot-slider-img img {
-  height: 160px;
-  width: 160px;
+  height: 200px;
+  width: 150px;
   object-fit: cover;
+  border-radius: 2px;
 }
 
 .snapshots-carousel {
   width: 900px;
   margin: 50px auto;
+  box-sizing: border-box;
+}
+
+.snapshot-caption {
+  height: 100px;
+  width: 150px;
+  background-color: white;
+  color: #9da2ac;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 3px;
 }

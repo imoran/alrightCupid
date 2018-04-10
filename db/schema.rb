@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180409220802) do
+ActiveRecord::Schema.define(version: 20180410203559) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20180409220802) do
     t.integer "zipcode", null: false
     t.string "location", null: false
     t.string "first_name", null: false
+    t.string "motto"
     t.index ["age"], name: "index_users_on_age"
     t.index ["gender"], name: "index_users_on_gender"
     t.index ["orientation"], name: "index_users_on_orientation"

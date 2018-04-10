@@ -34,3 +34,10 @@ export const getOneUser = id => {
     method: 'GET'
   });
 };
+
+export const postResponse = () => {
+  return $.ajax({
+    url: '/api/responses',
+    method: 'POST'
+  });
+};
