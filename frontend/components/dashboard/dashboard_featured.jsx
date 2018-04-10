@@ -1,4 +1,5 @@
 import React from 'react';
+import FeaturedIndexContainer from '../homepage/featured/featured_index_container';
 
 export default class Featured extends React.Component {
   constructor(props) {
@@ -8,7 +9,7 @@ export default class Featured extends React.Component {
   render() {
     return (
       <div className="featured-blue-section">
-        featured people!
+        <FeaturedIndexContainer />
       </div>
     );
   }

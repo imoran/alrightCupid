@@ -1,0 +1,12 @@
+
+
+.featured-carousel img {
+  width: 70px;
+  height: 70px;
+}
+
+.featured-carousel {
+  display: flex;
+  flex-direction: row;
+
+}
