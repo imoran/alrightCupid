@@ -47,8 +47,16 @@
   text-align: center;
 }
 
-.lorem {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
+
+/* ======== Dashboard Main Body ========= */
+
+.dashboard-main-body {
+  background-color: #f3f5f9;
+  color: black;
+}
+
+.dashboard-main-body h1 {
+  width: 900px;
+  margin: 70px auto;
+  font-weight: bold;
 }
