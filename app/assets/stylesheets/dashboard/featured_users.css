@@ -1,12 +1,10 @@
+.slider-img img {
+  height: 120px;
+  width: 180px;
 
-
-.featured-carousel img {
-  width: 70px;
-  height: 70px;
 }
 
-.featured-carousel {
-  display: flex;
-  flex-direction: row;
-
+.carousel {
+  width: 900px;
+  margin: 200px auto;
 }

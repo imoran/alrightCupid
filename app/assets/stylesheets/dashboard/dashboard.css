@@ -54,6 +54,5 @@
 }
 
 .slider-img img {
-  min-width: 100%;
-  height: 258px;
+  margin-right: 20px;
 }

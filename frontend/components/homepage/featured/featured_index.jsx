@@ -14,14 +14,12 @@ class FeaturedIndex extends React.Component {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      arrows: true,
-      centerPadding: '30px',
+      slidesToShow: 5,
+      slidesToScroll: 4,
     };
     const { users } = this.props;
     return (
-      <div className="random">
+      <div className="carousel">
         <Slider {...settings}>
             {users.map(function(el, idx) {
               return(
