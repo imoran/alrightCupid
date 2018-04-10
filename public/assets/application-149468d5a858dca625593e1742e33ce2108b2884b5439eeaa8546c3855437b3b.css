@@ -1,0 +1,607 @@
+
+/* ======== Dashboard Header ========= */
+
+
+.dashboard-header {
+  background-color: #104ca0;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  z-index: 10;
+}
+
+.dashboard-header-group {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.dashboard-header-group ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.dashboard-header-group ul li {
+  margin: 10px;
+  color: #d6e1f9;
+}
+
+.dashboard-header-left {
+  border-bottom: 1px solid #79797b;
+  width: 90%;
+}
+
+.dashboard-header-right {
+  width: 10%;
+}
+
+/* ======== Dashboard Featured ========= */
+
+.featured-blue-section {
+  background-color: #104ca0;
+  margin-top: 40px;
+  padding-top: 20px;
+  width: 100%;
+  height: 410px;
+  color: white;
+  text-align: center;
+}
+
+.lorem {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.slider-img img {
+  min-width: 100%;
+  height: 258px;
+}
+.logout-button {
+  border: none;
+  color: white;
+  padding: 6px;
+  background-color: #4fc5d0;
+  font-size: 12px;
+  font-weight: lighter;
+  border-radius: 2px;
+}
+
+
+.featured-carousel img {
+  width: 70px;
+  height: 70px;
+}
+
+.featured-carousel {
+  display: flex;
+  flex-direction: row;
+
+}
+/* ======== Homepage ========= */
+
+
+.home-page-footer {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.home-page-couch {
+  background: url("https://cdn.okccdn.com/media/img/dtf/photos/couch.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #24d8f3;
+  background-position:fixed;
+  height: 45em;
+}
+
+.home-page-eyemasks {
+  background: url("https://cdn.okccdn.com/media/img/dtf/photos/eyemasks.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #21bd65;
+  background-position:fixed;
+  height: 45em;
+}
+
+.home-page-facepaint {
+  background: url("https://cdn.okccdn.com/media/img/dtf/photos/facepaint.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #23c3fd;
+  background-position:fixed;
+  background-size: 600px;
+  height: 45em;
+}
+
+.home-page-hands {
+  background: url("https://cdn.okccdn.com/media/img/dtf/photos/hands.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #f0a1c1;
+  background-position:fixed;
+  background-size: 800px;
+  height: 45em;
+}
+
+.home-page-rose {
+  background:url("https://cdn.okccdn.com/media/img/dtf/photos/rose.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #ffc5e3;
+  background-position:fixed;
+  background-size: 900px;
+  height: 45em;
+}
+
+/* ======== Header Homepage ========= */
+
+.home-page-signin {
+  background-color: transparent;
+  color: black;
+  border-radius: 3px;
+  border: 1px solid black;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.home-page-signin:hover {
+  cursor: pointer;
+  color: #000000b3;
+}
+
+.home-page-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.home-page-header-account {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 270px;
+}
+
+.home-page-header-account p {
+  position: relative;
+  top: 5px;
+  font-size: 14px;
+}
+
+/* ======== Splash========= */
+
+.home-page-splash {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.home-page-splash h1 {
+  height: 108px;
+  text-indent: -9999px;
+  background-size: 470px auto;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.okccdn.com/media/img/dtf/title.png");
+}
+
+.home-page-splash div {
+  width: 400px;
+  font-size: 18px;
+}
+
+.home-page-signin {
+  padding: 8px 11px;
+  border-radius: 3px;
+  border: 1px solid black;
+  font-size: 0.7em;
+  font-weight: bold;
+  font-family: GT America,sans-serif;
+}
+
+.home-page-signin:hover {
+  cursor: pointer;
+  color: #000000b3;
+}
+
+.home-page-footer {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.home-page-couch {
+  background: url("https://cdn.okccdn.com/media/img/dtf/photos/couch.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #24d8f3;
+  background-position:fixed;
+  height: 45em;
+}
+
+.home-page-eyemasks {
+  background: url("https://cdn.okccdn.com/media/img/dtf/photos/eyemasks.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #21bd65;
+  background-position:fixed;
+  height: 45em;
+}
+
+.home-page-facepaint {
+  background: url("https://cdn.okccdn.com/media/img/dtf/photos/facepaint.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #23c3fd;
+  background-position:fixed;
+  background-size: 600px;
+  height: 45em;
+}
+
+.home-page-hands {
+  background: url("https://cdn.okccdn.com/media/img/dtf/photos/hands.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #f0a1c1;
+  background-position:fixed;
+  background-size: 800px;
+  height: 45em;
+}
+
+.home-page-rose {
+  background:url("https://cdn.okccdn.com/media/img/dtf/photos/rose.jpg")
+  no-repeat scroll calc(100vw / 2) 50px #ffc5e3;
+  background-position:fixed;
+  background-size: 900px;
+  height: 45em;
+}
+
+.home-page-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  width: 900px;
+  margin: 0 auto;
+}
+
+
+/* ================= */
+
+.home-page-splash {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.home-page-splash h1 {
+  height: 108px;
+  text-indent: -9999px;
+  background-size: 470px auto;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.okccdn.com/media/img/dtf/title.png");
+}
+
+.home-page-splash div {
+  width: 400px;
+  font-size: 18px;
+}
+/* ================= */
+
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal_form {
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;        /* for single line flex container */
+  align-content: center;
+}
+
+
+/* ===========Sign in form ===========*/
+
+
+.outer-signin {
+  border-radius: 10px;
+  width: 200px;
+  height: 250px;
+  padding: 20px 30px;
+  background-color: #f3f5f9;
+  border-collapse: separate;
+}
+
+.signin-form {
+  width: 200px;
+  height: 250px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.signin-form h2 {
+  margin: 15px 0;
+}
+
+.signin-form input {
+  border: 1px solid #ccd0da;
+  margin-bottom: 10px;
+  line-height: 30px;
+  padding: 3px;
+  background-color: #ffffff;
+  font-size: 12px;
+  width: 180px;
+}
+
+
+.signin-form input:focus {
+  border: 2px solid #9dbaf2;
+  border-style:solid
+}
+
+
+.signin-form button {
+  border: none;
+  margin-top: 10px;
+  background-color: #4c7bd9;
+  color: white;
+  width: 180px;
+  height: 40px;
+  font-size: 12px;
+  font-weight: lighter;
+}
+/* ======== Signup 1 ========= */
+
+
+.signup1 {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  margin: 25px auto;
+}
+
+.signup1 p {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.signup1-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.signup1-group select {
+  margin-right: 10px;
+  font-size: 17px;
+  line-height: 17px;
+  cursor: pointer;
+  width: 135px;
+}
+
+.signup1-button {
+  padding: 13px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+
+
+
+/* ======== Signup 2 ========= */
+
+.signup2-body {
+  height: 45em;
+}
+
+.signup2-main-title {
+  width: 900px;
+  margin: 40px auto;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.signup2-main-body {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.signup2-vertical {
+  margin: 0 40px;
+}
+
+.signup2-vertical-line {
+  border: 0;
+  border-left: 2px solid black;
+  margin: 1em .5em;
+  min-height: 10em;
+}
+
+.signup2-or {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.signup2-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup2-form label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.signup2-form-firstname {
+  background-color: white;
+  border-radius: 4px;
+  padding: 9px;
+  width: 200px;
+}
+
+.signup2-form-select {
+  background-color: white;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  max-width: 150px;
+  min-width: 60px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.signup2-form-zipcode {
+  background-color: white;
+  border-radius: 4px;
+  padding: 9px;
+  width: 80px;
+}
+
+.signup2-form-next {
+  padding: 11px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: lighter;
+  width: 135px;
+  margin-top: 30px;
+}
+
+.signup2-facebook {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  top: -55px;
+}
+
+.signup2-facebook button {
+  background-color: #3260c7;
+  color: white;
+  font-weight: lighter;
+  font-size: 15px;
+  border: none;
+  border-radius: 3px;
+  padding: 12px;
+  width: 300px;
+}
+
+.signup2-facebook div:nth-child(2n){
+  margin-bottom: 1.6em;
+}
+
+.signup2-facebook div {
+  font-size: 17px;
+}
+
+
+/* ======== Signup 3 ========= */
+
+.signup3-body {
+  height: 45em;
+}
+
+.signup3-main-title {
+  width: 900px;
+  margin: 40px auto;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+
+.signup3-form {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  margin: 40px auto;
+}
+
+.signup3-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup3-form label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.signup3-inputs input {
+  background-color: white;
+  border-radius: 4px;
+  padding: 9px;
+  width: 200px;
+}
+
+.signup3-form > input {
+  padding: 11px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: lighter;
+  width: 200px;
+  margin-top: 45px;
+  margin-bottom: 5px;
+}
+
+.signup3-form p {
+  font-size: 13px;
+}
+
+.signup3-inputs .signup3-password-input {
+  width: 250px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+ html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, p, form, label, input, article, aside, figure, figcaption, footer, header, nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: GT America,sans-serif;
+  background: transparent;
+ }
+
+ body {
+   line-height: 1.5;
+ }
+
+ ol, ul {
+   list-style: none;
+ }
+
+ img {
+   width: 100%
+ }
