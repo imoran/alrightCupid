@@ -3,6 +3,12 @@ import React from 'react';
 export default class DashboardHeader extends React.Component {
   constructor(props) {
     super(props);
+    console.log("dashboard_header props", this.props);
+    this.logoutUser = this.logoutUser.bind(this);
+  }
+
+  logoutUser() {
+    this.props.logout(this.props.user);
   }
 
 
@@ -18,7 +24,7 @@ export default class DashboardHeader extends React.Component {
 
           <ul className="dashboard-header-right">
             <li>Profile</li>
-            <li>Logout</li>
+            <li><button className="logout-button" onClick={this.logoutUser}>Logout</button></li>
           </ul>
         </div>
 

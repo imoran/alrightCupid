@@ -4,7 +4,7 @@ import DashboardHeader from './dashboard_header';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
-  statess: state
+  user: state.session.currentUser
 });
 
 
