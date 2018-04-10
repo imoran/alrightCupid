@@ -18,8 +18,8 @@ export default class DashboardHeader extends React.Component {
           </ul>
 
           <ul className="dashboard-header-right">
-            <li>picture</li>
-            <li>nothing</li>
+            <li>Profile</li>
+            <li>Logout</li>
           </ul>
         </div>
 

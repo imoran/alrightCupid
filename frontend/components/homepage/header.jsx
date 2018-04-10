@@ -23,10 +23,12 @@ class Header extends React.Component {
         <div>Logo</div>
         <div className="home-page-header-account">
           <p>Have an account?</p>
-        </div>
-        <div className="demo-user">
-          <button onClick={() => this.props.openModal('login')}>Sign in</button>
-          <button onClick={this.loginDemoUser}>Demo User</button>
+          <button onClick={() => this.props.openModal('login')}
+            className='home-page-signin'
+            >Sign in</button>
+          <button onClick={this.loginDemoUser}
+            className='home-page-signin'
+            >Demo User</button>
         </div>
       </header>
     );

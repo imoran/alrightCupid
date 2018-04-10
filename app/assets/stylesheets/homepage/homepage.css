@@ -1,16 +1,4 @@
-.home-page-signin {
-  padding: 8px 11px;
-  border-radius: 3px;
-  border: 1px solid black;
-  font-size: 0.7em;
-  font-weight: bold;
-  font-family: GT America,sans-serif;
-}
-
-.home-page-signin:hover {
-  cursor: pointer;
-  color: #000000b3;
-}
+/* ======== Homepage ========= */
 
 .home-page-footer {
   margin-top: 10px;
@@ -58,19 +46,44 @@
   height: 45em;
 }
 
+/* ======== Header Homepage ========= */
+
+.home-page-signin {
+  background-color: transparent;
+  color: black;
+  border-radius: 3px;
+  border: 1px solid black;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.home-page-signin:hover {
+  cursor: pointer;
+  color: #000000b3;
+}
+
+.home-page-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  width: 900px;
+  margin: 0 auto;
+}
+
 .home-page-header-account {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 180px
+  width: 270px;
 }
 
 .home-page-header-account p {
-  font-size: 12px;
-  margin-top: 8px;
+  position: relative;
+  top: 5px;
+  font-size: 14px;
 }
 
-/* ================= */
+/* ======== Splash========= */
 
 .home-page-splash {
   width: 900px;
@@ -88,12 +101,6 @@
 .home-page-splash div {
   width: 400px;
   font-size: 18px;
-}.home-page-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px;
-  width: 900px;
-  margin: 0 auto;
 }
 
 .home-page-signin {
@@ -183,11 +190,4 @@
 .home-page-splash div {
   width: 400px;
   font-size: 18px;
-}
-
-.demo-user {
-  font-size: 12px;
-  margin-top: 8px;
-  flex-direction: row;
-
 }
