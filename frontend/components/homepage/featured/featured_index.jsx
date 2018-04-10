@@ -1,5 +1,7 @@
 import React from 'react';
 import FeaturedIndexItem from './featured_index_item';
+import Slider from 'react-slick';
+
 
 class FeaturedIndex extends React.Component {
   componentDidMount() {
@@ -8,15 +10,26 @@ class FeaturedIndex extends React.Component {
   }
 
   render() {
+    const settings = {
+      dots: false,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      arrows: true,
+      centerPadding: '30px',
+    };
     const { users } = this.props;
-    console.log("users  =>", users);
     return (
-      <div className="outer-carousel">
-        <ul className="featured-carousel">
-          {users.map(function(el, idx) {
-              return(<li><img src={el.image_url} />{el.first_name}</li>)
+      <div className="random">
+        <Slider {...settings}>
+            {users.map(function(el, idx) {
+              return(
+              <div className="slider-img">
+                <h3><img src={el.image_url} />{el.first_name}</h3>
+              </div>)
             })}
-        </ul>
+        </Slider>
       </div>
     );
   }

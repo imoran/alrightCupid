@@ -97,7 +97,7 @@ User.create!([{
     orientation: "Bisexual",
     location: "United States",
     age: 39,
-    image_url: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    image_url: "https://images.pexels.com/photos/354951/pexels-photo-354951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password"
   },
   {
@@ -119,7 +119,7 @@ User.create!([{
     orientation: "Other",
     location: "United States",
     age: 36,
-    image_url: "https://images.pexels.com/photos/865713/pexels-photo-865713.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    image_url: "https://images.pexels.com/photos/109851/pexels-photo-109851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password"
   },
   {
@@ -130,7 +130,7 @@ User.create!([{
     orientation: "Bisexual",
     location: "United States",
     age: 28,
-    image_url: "https://images.pexels.com/photos/157886/fashionable-girl-in-glasses-in-the-black-pants-157886.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    image_url: "https://images.pexels.com/photos/774095/pexels-photo-774095.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password"
   },
   {
@@ -141,7 +141,7 @@ User.create!([{
     orientation: "Straight",
     location: "United States",
     age: 29,
-    image_url: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    image_url: "https://images.pexels.com/photos/826380/pexels-photo-826380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password"
   },
   {
@@ -152,7 +152,7 @@ User.create!([{
     orientation: "Bisexual",
     location: "United States",
     age: 28,
-    image_url: "https://images.pexels.com/photos/605207/pexels-photo-605207.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    image_url: "https://images.pexels.com/photos/185847/pexels-photo-185847.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password"
   },
   {
@@ -163,7 +163,7 @@ User.create!([{
     orientation: "Other",
     location: "United States",
     age: 35,
-    image_url: "https://images.pexels.com/photos/211050/pexels-photo-211050.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    image_url: "https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password"
   },
   {
@@ -243,6 +243,7 @@ User.create!([{
     image_url: "https://images.pexels.com/photos/59576/pexels-photo-59576.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password"
   }])
+  
 Question.create!([
 {
   category: "Colors",

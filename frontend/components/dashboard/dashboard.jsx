@@ -1,5 +1,5 @@
 import React from 'react';
-import DashboardHeader from './dashboard_header';
+import DashboardHeaderContainer from './dashboard_header_container';
 import Featured from './dashboard_featured';
 
 export default class Dashboard extends React.Component {
@@ -11,7 +11,7 @@ export default class Dashboard extends React.Component {
   render() {
     return (
       <div>
-          <DashboardHeader />
+          <DashboardHeaderContainer />
           <Featured />
 
             <div className="lorem">

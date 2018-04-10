@@ -6,7 +6,6 @@ export default class DashboardHeader extends React.Component {
   }
 
 
-
   render() {
     return (
       <div className="dashboard-header">
