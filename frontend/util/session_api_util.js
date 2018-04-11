@@ -41,3 +41,10 @@ export const postResponse = () => {
     method: 'POST'
   });
 };
+
+export const getAllQuestions = () => {
+  return $.ajax({
+    url: '/api/questions',
+    method: 'GET'
+  });
+};
