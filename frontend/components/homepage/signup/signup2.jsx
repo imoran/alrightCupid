@@ -8,17 +8,6 @@ import HeaderContainer from '../header_container';
 export default class SignUp2 extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   first_name: 'Isis',
-    //   month: 'Apr',
-    //   day: '22',
-    //   year: '1993',
-    //   location: 'United States',
-    //   zipcode: '94102',
-    //   nameError: [],
-    //   zipError: [],
-    //   birthError: []
-    // };
     this.state = {
       first_name: '',
       month: 'Month',
