@@ -1,5 +1,5 @@
 @questions.each do |question|
   json.set! question.id do
-    json.extract! question, :title, :category
+    json.extract! question, :id, :title, :category
   end
 end

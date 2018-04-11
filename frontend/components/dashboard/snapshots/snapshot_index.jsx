@@ -4,8 +4,8 @@ import Slider from 'react-slick';
 
 class SnapshotIndex extends React.Component {
   componentDidMount() {
-    this.props.requestAllUsers().
-    then(() => console.log("Snapshot index props =>", this.props));
+    this.props.requestAllUsers();
+    // .then(() => console.log("Snapshot index props =>", this.props));
   }
 
   render() {

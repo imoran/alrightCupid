@@ -5,6 +5,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import DashboardContainer from './dashboard/dashboard_container';
 import HomePageContainer from './homepage/home_page_container';
 import Modal from './homepage/signin/modal';
+import MatchContainer from './match/match_container';
 
 const App = () => (
   <div>
@@ -12,6 +13,7 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/" component={HomePageContainer} />
       <ProtectedRoute exact path="/dashboard" component={DashboardContainer} />
+      <ProtectedRoute exact path="/match" component={MatchContainer} />
     </Switch>
   </div>
 );

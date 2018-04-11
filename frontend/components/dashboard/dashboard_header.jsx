@@ -1,16 +1,22 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-export default class DashboardHeader extends React.Component {
+
+class DashboardHeader extends React.Component {
   constructor(props) {
     super(props);
-    console.log("dashboard_header props", this.props);
+    // console.log("dashboard_header props", this.props);
     this.logoutUser = this.logoutUser.bind(this);
+    this.browseMatches = this.browseMatches.bind(this);
   }
 
   logoutUser() {
     this.props.logout(this.props.user);
   }
 
+  browseMatches() {
+    this.props.history.push('/match');
+  }
 
   render() {
     return (
@@ -19,7 +25,7 @@ export default class DashboardHeader extends React.Component {
         <div className="dashboard-header-group">
           <ul className="dashboard-header-left">
             <li>Logo</li>
-            <li>Browse Matches</li>
+            <li onClick={this.browseMatches}>Browse Matches</li>
           </ul>
 
           <ul className="dashboard-header-right">
@@ -32,3 +38,6 @@ export default class DashboardHeader extends React.Component {
     );
   }
 }
+
+
+export default withRouter(DashboardHeader);

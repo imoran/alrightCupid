@@ -4,8 +4,8 @@ import Slider from 'react-slick';
 
 class FeaturedIndex extends React.Component {
   componentDidMount() {
-    this.props.requestAllUsers().
-    then(() => console.log("Featured index props =>", this.props));
+    this.props.requestAllUsers();
+    // .then(() => console.log("Featured index props =>", this.props));
   }
 
   render() {

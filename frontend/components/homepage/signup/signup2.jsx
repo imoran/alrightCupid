@@ -19,7 +19,7 @@ export default class SignUp2 extends React.Component {
       zipError: [],
       birthError: []
     };
-    
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.errorHandling = this.errorHandling.bind(this);
   }

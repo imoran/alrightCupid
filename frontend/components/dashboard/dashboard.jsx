@@ -9,7 +9,7 @@ import DashboardFooter from './dashboard_footer';
 export default class Dashboard extends React.Component {
   constructor(props) {
     super(props);
-    console.log("Dashboard props =>", this.props);
+    // console.log("Dashboard props =>", this.props);
   }
 
   render() {
