@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { receiveQuestions } from '../../actions/question_actions';
+import { receiveQuestions } from '../../../actions/question_actions';
 import QuestionsIndex from './questions_index';
 import values from 'lodash/values';
 

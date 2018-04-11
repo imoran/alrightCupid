@@ -1,5 +1,4 @@
 import React from 'react';
-import FeaturedIndexItem from './featured_index_item';
 import Slider from 'react-slick';
 
 
@@ -19,15 +18,17 @@ class FeaturedIndex extends React.Component {
     };
     const { users } = this.props;
     return (
-      <div className="carousel">
-        <Slider {...settings}>
+      <div className="dashboard-featured">
+        <div className="featured-carousel">
+          <Slider {...settings}>
             {users.map(function(el, idx) {
               return (
-              <div className="slider-img">
-                <h3><img src={el.image_url} />{el.first_name}</h3>
-              </div>);
-            })}
-        </Slider>
+                <div className="slider-img" key={idx}>
+                  <h3><img src={el.image_url} />{el.first_name}</h3>
+                </div>);
+              })}
+            </Slider>
+        </div>
       </div>
     );
   }

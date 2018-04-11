@@ -15,9 +15,9 @@ class QuestionsIndex extends React.Component {
     return(
       <div className="dashboard-form">
         <form>
-          <label>
-            {this.props.questions.map(q => <li>{q.title}</li>)}
-          </label>
+            {this.props.questions.map((q, idx) => (
+              <div key={idx}>{q.title}</div>
+            ))}
         </form>
       </div>
     );

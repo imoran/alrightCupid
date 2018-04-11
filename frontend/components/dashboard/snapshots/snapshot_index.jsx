@@ -19,14 +19,14 @@ class SnapshotIndex extends React.Component {
     const { users } = this.props;
     return (
       <div className="snapshots-carousel">
+        <h1>Snapshots</h1>
         <Slider {...settings}>
-            {users.map(function(el, idx) {
-              return (
-              <div className="snapshot-slider-img">
+            {users.map((el, idx) => (
+              <div className="snapshot-slider" key={idx}>
                 <h3><img src={el.image_url} /></h3>
-                <p className="snapshot-caption">{el.motto}</p>
-              </div>);
-            })}
+                <p>{el.motto}</p>
+              </div>
+            ))}
         </Slider>
       </div>
     );
