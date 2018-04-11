@@ -31,6 +31,10 @@ class User < ApplicationRecord
     self.session_token
   end
 
+  def self.search_by_name(name)
+    #Active Record 
+  end
+
   private
 
   def ensure_session_token

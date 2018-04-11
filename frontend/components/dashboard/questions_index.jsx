@@ -13,10 +13,12 @@ class QuestionsIndex extends React.Component {
   render() {
     const { questions } = this.props;
     return(
-      <div>
-        <ul>
-          {this.props.questions.map(q => <li>{q.title}</li>)}
-        </ul>
+      <div className="dashboard-form">
+        <form>
+          <label>
+            {this.props.questions.map(q => <li>{q.title}</li>)}
+          </label>
+        </form>
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import DashboardHeaderContainer from './dashboard_header_container';
 import Featured from './dashboard_featured';
-import SnapshotIndexContainer from '../homepage/snapshots/snapshot_index_container';
+import SnapshotIndexContainer from './snapshots/snapshot_index_container';
 import QuestionsIndexContainer from './questions_index_container';
 
 export default class Dashboard extends React.Component {

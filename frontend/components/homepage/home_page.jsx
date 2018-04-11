@@ -1,11 +1,10 @@
 import React from 'react';
-import GreetingContainer from '../greeting/greeting_container';
 import HeaderContainer from './header_container';
 import { Footer } from './footer';
 import Splash from './splash';
-import SignUp1 from '../session_form/signup1_container';
-import SignUp2 from '../session_form/signup2_container';
-import SignUp3 from '../session_form/signup3_container';
+import SignUp1 from './signup/signup1_container';
+import SignUp2 from './signup/signup2_container';
+import SignUp3 from './signup/signup3_container';
 
 
 

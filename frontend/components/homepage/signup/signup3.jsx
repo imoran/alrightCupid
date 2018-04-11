@@ -1,6 +1,6 @@
 import React from 'react';
 import merge from 'lodash/merge';
-import HeaderContainer from '../homepage/header_container';
+import HeaderContainer from '../header_container';
 import { withRouter } from 'react-router-dom';
 
 

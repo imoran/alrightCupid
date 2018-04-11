@@ -1,5 +1,5 @@
 import React from 'react';
-import FeaturedIndexContainer from '../homepage/featured/featured_index_container';
+import FeaturedIndexContainer from './featured/featured_index_container';
 
 export default class Featured extends React.Component {
   constructor(props) {

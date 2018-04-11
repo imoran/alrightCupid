@@ -1,6 +1,16 @@
 
 /* ======== Dashboard Header ========= */
 
+.logout-button {
+  border: none;
+  color: white;
+  padding: 6px;
+  background-color: #4fc5d0;
+  font-size: 12px;
+  font-weight: lighter;
+  border-radius: 2px;
+}
+
 .dashboard-header {
   background-color: #104ca0;
   position: fixed;
@@ -47,6 +57,18 @@
   text-align: center;
 }
 
+.slider-img img {
+  height: 160px;
+  width: 160px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.carousel {
+  width: 900px;
+  margin: 110px auto;
+}
+
 
 /* ======== Dashboard Main Body ========= */
 
@@ -59,4 +81,37 @@
   width: 900px;
   margin: 70px auto;
   font-weight: bold;
+}
+
+
+/* ======== Dashboard Form ========= */
+
+.dashboard-form {
+  width: 80px;
+  height: 200px;
+}
+
+/* ======== Dashboard Snapshots ========= */
+
+.snapshot-slider-img img {
+  height: 200px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.snapshots-carousel {
+  width: 900px;
+  margin: 50px auto;
+  box-sizing: border-box;
+}
+
+.snapshot-caption {
+  height: 100px;
+  width: 150px;
+  background-color: white;
+  color: #9da2ac;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 3px;
 }

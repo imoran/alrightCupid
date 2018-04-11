@@ -1,7 +1,7 @@
 import React from 'react';
 import list from './signup_data';
 import merge from 'lodash/merge';
-import HeaderContainer from '../homepage/header_container';
+import HeaderContainer from '../header_container';
 
 
 

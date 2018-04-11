@@ -1,31 +1,31 @@
 import React from 'react';
+import FeaturedIndexItem from './featured_index_item';
 import Slider from 'react-slick';
 
 
-class SnapshotIndex extends React.Component {
+class FeaturedIndex extends React.Component {
   componentDidMount() {
     this.props.requestAllUsers().
-    then(() => console.log("Snapshot index props =>", this.props));
+    then(() => console.log("Featured index props =>", this.props));
   }
 
   render() {
     const settings = {
       dots: false,
-      infinite: false,
+      infinite: true,
       speed: 500,
       slidesToShow: 5,
       slidesToScroll: 4,
     };
     const { users } = this.props;
     return (
-      <div className="snapshots-carousel">
+      <div className="carousel">
         <Slider {...settings}>
             {users.map(function(el, idx) {
-              return(
-              <div className="snapshot-slider-img">
-                <h3><img src={el.image_url} /></h3>
-                <p className="snapshot-caption">{el.motto}</p>
-              </div>)
+              return (
+              <div className="slider-img">
+                <h3><img src={el.image_url} />{el.first_name}</h3>
+              </div>);
             })}
         </Slider>
       </div>
@@ -33,4 +33,4 @@ class SnapshotIndex extends React.Component {
   }
 }
 
-export default SnapshotIndex;
+export default FeaturedIndex;

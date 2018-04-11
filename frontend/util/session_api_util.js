@@ -35,10 +35,13 @@ export const getOneUser = id => {
   });
 };
 
-export const postResponse = () => {
+export const postResponse = (formResponse) => {
   return $.ajax({
     url: '/api/responses',
-    method: 'POST'
+    method: 'POST',
+    data: {
+      formResponse
+    }
   });
 };
 

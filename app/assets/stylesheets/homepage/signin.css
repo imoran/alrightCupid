@@ -1,4 +1,4 @@
-/* ================= */
+/* ========= Modal ======== */
 
 .modal-background {
   position: fixed;
@@ -22,12 +22,12 @@
   background-color: white;
   display: flex;
   justify-content: center;
-  align-items: center;        /* for single line flex container */
+  align-items: center;
   align-content: center;
 }
 
 
-/* ===========Sign in form ===========*/
+/* =========== Sign in form ===========*/
 
 
 .outer-signin {

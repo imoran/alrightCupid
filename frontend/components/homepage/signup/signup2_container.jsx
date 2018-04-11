@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { updateUserInfo } from '../../actions/signup_actions';
+import { updateUserInfo } from '../../../actions/signup_actions';
 import React from 'react';
 import SignUp2 from './signup2';
 
