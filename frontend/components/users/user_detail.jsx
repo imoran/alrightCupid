@@ -6,15 +6,19 @@ import DashboardFooter from '../dashboard/dashboard_footer';
 class UserDetail extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { user: {} };
+    this.state = { user: {}, description_questions: {} };
   }
 
   componentDidMount() {
+    this.props.requestAllDescriptionQuestions()
+    .then(questions => {
+      this.setState({ description_questions: questions });
+    });
     this.props.requestSingleUser(this.props.match.params.userId)
     .then(user => {
       this.setState({user: user.user});
+      console.log("USER DETAIL PROPS =>", this.state);
     });
-    this.props.requestAllDescriptionQuestions();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -39,7 +43,6 @@ class UserDetail extends React.Component {
               <p>{user.state}</p>
             </div>
             <div>
-              
             </div>
           </div>
         </div>

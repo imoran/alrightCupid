@@ -4,9 +4,9 @@ import { RECEIVE_ALL_DESCRIPTION_QUESTIONS } from '../actions/description_action
 
 const descriptionReducer = (state = {}, action) => {
   Object.freeze(state);
-  switch (action.descriptions) {
+  switch (action.description_actions) {
     case RECEIVE_ALL_DESCRIPTION_QUESTIONS:
-      return merge({}, state, action.descriptions);
+      return merge({}, state, action.description_questions);
     default:
       return state;
   }

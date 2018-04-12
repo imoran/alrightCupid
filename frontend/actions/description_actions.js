@@ -2,12 +2,12 @@ import * as APIUtil from '../util/session_api_util';
 
 export const RECEIVE_ALL_DESCRIPTION_QUESTIONS = 'RECEIVE_ALL_DESCRIPTION_QUESTIONS';
 
-export const receiveAllDescriptions = descriptions => ({
+export const receiveAllDescriptions = description_questions => ({
   type: RECEIVE_ALL_DESCRIPTION_QUESTIONS,
-  descriptions
+  description_questions
 });
 
-export const receiveAllDescriptionQuestions = descriptionQuestions => dispatch => {
+export const receiveAllDescriptionQuestions = () => dispatch => {
   return APIUtil.receiveAllDescriptionQuestions()
-  .then(questions => dispatch(receiveAllDescriptions(questions)))
+  .then(questions => dispatch(receiveAllDescriptions(questions)));
 };
