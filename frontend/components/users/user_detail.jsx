@@ -6,19 +6,22 @@ import DashboardFooter from '../dashboard/dashboard_footer';
 class UserDetail extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { user: {}, description_questions: {} };
+    this.state = {
+      user: {},
+      description_questions: []
+    };
   }
 
   componentDidMount() {
-    this.props.requestAllDescriptionQuestions()
-    .then(questions => {
-      this.setState({ description_questions: questions });
+    this.props.receiveAllDescriptionQuestions()
+    .then(question => {
+      this.setState({ description_questions: this.props.description_questions });
     });
     this.props.requestSingleUser(this.props.match.params.userId)
     .then(user => {
       this.setState({user: user.user});
-      console.log("USER DETAIL PROPS =>", this.state);
     });
+
   }
 
   componentWillReceiveProps(nextProps) {
@@ -39,15 +42,22 @@ class UserDetail extends React.Component {
             <h1>{user.first_name}</h1>
             <div>
               <p>{user.age}</p>
-              <p>{user.city}</p>
-              <p>{user.state}</p>
+              <p>{user.city}, {user.state}</p>
             </div>
             <div>
             </div>
           </div>
         </div>
 
-        <div className="xx"></div>
+        <div className="xx">
+          <div className="user-description-questions">
+            {
+              this.state.description_questions.map(question =>
+                <p key={question.id}>{question.title}</p>
+              )
+            }
+          </div>
+        </div>
         <DashboardFooter />
       </div>
     );

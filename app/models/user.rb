@@ -6,6 +6,7 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }, allow_nil: true
   geocoded_by :zipcode
   before_validation :ensure_session_token, :geocode
+  after_initialize :ensure_geocode
 
   has_many :question_responses
   has_many :description_responses
@@ -35,6 +36,12 @@ class User < ApplicationRecord
   def self.search_by_name(name)
     #Active Record
   end
+
+  def ensure_geocode
+    return if valid_location?
+    self.geocode
+    self.save!
+  end
   #
   # def get_query
   #   geo_localization = "#{self.latitude}, #{self.longitude}"
@@ -42,15 +49,24 @@ class User < ApplicationRecord
   # end
   #
   def get_city
+    return self.city if self.city
+    return "city" unless valid_location?
     geo_localization = "#{self.latitude}, #{self.longitude}"
-    query = Geocoder.search(geo_localization).first
-    self.city = get_query.city
+    self.city = Geocoder.search(geo_localization).first.city
+    self.save!
   end
-  #
+
+
+  def valid_location?
+    self.latitude && self.longitude
+  end
+
   def get_state
+    return "state" unless self.valid_location?
+    return self.state if self.state
     geo_localization = "#{self.latitude}, #{self.longitude}"
-    query = Geocoder.search(geo_localization).first
-    self.state = get_query.state
+    self.state = Geocoder.search(geo_localization).first.state
+    self.save!
   end
 
   private

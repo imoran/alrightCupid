@@ -418,10 +418,6 @@ description_question_2 = Description.create!(title: "My weirdest quirk")
 description_question_3 = Description.create!(title: "I couldn't function without this app")
 description_question_4 = Description.create!(title: "A perfect day")
 
-DescriptionResponse.create!(description_id: description_question_1,
-user_id: 1)
-
-
 
 User.all.each do |user|
   Question.all.each do |question|
@@ -441,7 +437,7 @@ random = ["The secret of happiness is total disregard of everybody", "Intoleranc
 "Maybe we're the fools, for thinking we know things. Maybe humans are the only ones who can deal with the fact that nothing can ever be known at all."]
 
 User.all.each do |user|
-  Descriptions.each do |description|
+  Description.all.each do |description|
     random.each do |r|
       DescriptionResponse.create!(description_id: description.id, user_id: user.id, response: r)
     end

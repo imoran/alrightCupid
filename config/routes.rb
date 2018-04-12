@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     #responses will change
     resources :responses, only: [:index]
     resources :descriptions, only: [:index]
+    # get '/search' 'search_controller#search'
   end
 
   root "static_pages#root"

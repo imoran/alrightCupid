@@ -58,3 +58,16 @@
   height: 1000px;
   background-color: #ffff;
 }
+
+
+.user-description-questions {
+  width: 900px;
+  margin: 0 auto;
+  position: relative;
+  top: 80px;
+  font-weight: bold;
+}
+
+.user-description-questions p {
+  margin-bottom: 90px;
+}
