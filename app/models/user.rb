@@ -34,7 +34,11 @@ class User < ApplicationRecord
   end
 
   def self.search_by_name(name)
-    #Active Record
+    p "================="
+    p name
+    p "================="
+    search_name = "%#{name.downcase}%"
+    User.where('LOWER(first_name) LIKE ?', search_name)
   end
 
   def ensure_geocode
@@ -42,6 +46,8 @@ class User < ApplicationRecord
     self.geocode
     self.save!
   end
+
+
   #
   # def get_query
   #   geo_localization = "#{self.latitude}, #{self.longitude}"

@@ -11,6 +11,7 @@ Question.delete_all
 Answer.delete_all
 QuestionResponse.delete_all
 Description.delete_all
+DescriptionResponse.delete_all
 
 User.create!([{
     username: 'demo@demo.com',
@@ -438,8 +439,7 @@ random = ["The secret of happiness is total disregard of everybody", "Intoleranc
 
 User.all.each do |user|
   Description.all.each do |description|
-    random.each do |r|
-      DescriptionResponse.create!(description_id: description.id, user_id: user.id, response: r)
-    end
+    r = random.sample
+    DescriptionResponse.create!(description_id: description.id, user_id: user.id, response: r)
   end
 end

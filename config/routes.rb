@@ -4,8 +4,11 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :questions, only: [:index]
     #responses will change
-    resources :responses, only: [:index]
+    resources :question_answers, only: [:index, :create]
+    resources :description_responses, only: [:index, :create, :update]
+    resources :question_responses, only: [:index, :show]
     resources :descriptions, only: [:index]
+
     # get '/search' 'search_controller#search'
   end
 

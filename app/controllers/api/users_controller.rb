@@ -6,6 +6,9 @@ class Api::UsersController < ApplicationController
     #if params do query ajax otherwise:
     #near browse functionality
     @users = User.all
+    if params[:search]
+      @users = User.search_by_name(search_params[:search_query])
+    end
     render '/api/users/index'
   end
 
@@ -30,4 +33,15 @@ class Api::UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:username, :password, :zipcode, :first_name, :age, :latitude, :longitude, :gender, :orientation, :location)
   end
+
+  def search_params
+    params.require(:search).permit(:search_query)
+  end
+
+  # params: {
+  #   search: {
+  #     search_query: "Melissa"
+  #   }
+  # }
+
 end

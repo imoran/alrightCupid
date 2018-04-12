@@ -1,4 +1,4 @@
 class DescriptionResponse < ApplicationRecord
   belongs_to :description
-  belongs_to :users
+  belongs_to :user
 end

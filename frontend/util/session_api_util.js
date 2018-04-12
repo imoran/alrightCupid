@@ -35,12 +35,18 @@ export const getOneUser = id => {
   });
 };
 
-// export const postResponse = (formResponse) => {
+// export const postQuestionAnswer = (formResponse) => {
 //   return $.ajax({
 //     url: '/api/responses',
 //     method: 'POST',
 //     data: {
 //       formResponse
+//       //formResponse needs:
+//       {
+//         question_id:
+//         response:
+//
+//       }
 //     }
 //   });
 // };
@@ -51,6 +57,14 @@ export const getOneUser = id => {
 //   })
 // }
 
+export const getAllQuestionAnswers = () => {
+  return $.ajax({
+    url: '/api/question_answers',
+    method: 'GET'
+  });
+};
+
+
 export const getAllQuestions = () => {
   return $.ajax({
     url: '/api/questions',
@@ -58,29 +72,9 @@ export const getAllQuestions = () => {
   });
 };
 
-export const getAllAnswers = () => {
-
-};
-
-export const postAnswer = () => {
-
-};
-
 export const receiveAllDescriptionQuestions = () => {
   return $.ajax({
     url: '/api/descriptions',
     method: 'GET'
-  });
-};
-
-export const getSingleDescriptionResponse = () => {
-
-};
-
-export const updateSingleDescriptionResponse = (id, descriptionResponse) => {
-  return $.ajax({
-    url: `/api/descriptions/${id}`,
-    method: 'PATCH',
-    data: { descriptionResponse }
   });
 };
