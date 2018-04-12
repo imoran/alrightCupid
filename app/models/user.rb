@@ -1,13 +1,15 @@
 class User < ApplicationRecord
   validates :username, :first_name, :password_digest, :session_token, presence: true
-  validates :age, :latitude, :longitude, presence: true
+  validates :age, :latitude, :longitude, :city, :state, presence: true
   validates :zipcode, presence: true
   validates :username, :session_token, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
   geocoded_by :zipcode
   before_validation :ensure_session_token, :geocode
+  after_validation :get_city, :get_state
 
   has_many :question_responses
+  has_many :description_responses
 
   attr_reader :password
 
@@ -32,7 +34,24 @@ class User < ApplicationRecord
   end
 
   def self.search_by_name(name)
-    #Active Record 
+    #Active Record
+  end
+
+  def get_query
+    geo_localization = "#{self.latitude}, #{self.longitude}"
+    query = Geocoder.search(geo_localization).first
+  end
+
+  def get_city
+    geo_localization = "#{self.latitude}, #{self.longitude}"
+    query = Geocoder.search(geo_localization).first
+    self.city = get_query.city
+  end
+
+  def get_state
+    geo_localization = "#{self.latitude}, #{self.longitude}"
+    query = Geocoder.search(geo_localization).first
+    self.state = get_query.state
   end
 
   private

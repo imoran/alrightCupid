@@ -267,51 +267,51 @@ User.create!([{
 Question.create!([
 {
   category: "Colors",
-  title: "Green or Blue?"
+  title: "I prefer Green over Blue"
 },
 {
   category: "Colors",
-  title: "Orange or Black?"
+  title: "I prefer Orange over Black"
 },
 {
   category: "Colors",
-  title: "Red or Teal?"
+  title: "I prefer Red over Teal"
 },
 {
   category: "Colors",
-  title: "Purple or Yellow?"
+  title: "I prefer Purple over Yellow"
 },
 {
   category: "Music",
-  title: "Rock or Reggae?"
+  title: "I prefer Rock over Reggae"
 },
 {
   category: "Music",
-  title: "Alternative or Hip-Hop?"
+  title: "I prefer Alternative over Hip-Hop"
 },
 {
   category: "Music",
-  title: "EDM or Country?"
+  title: "I prefer EDM over Country"
 },
 {
   category: "Music",
-  title: "Pop or Classical?"
+  title: "I prefer Pop over Classical"
 },
 {
   category: "TV Shows",
-  title: "Breaking Bad or Sons of Anarchy?"
+  title: "I prefer Breaking Bad over Sons of Anarchy"
 },
 {
   category: "TV Shows",
-  title: "Grey's Anatomy or House?"
+  title: "I prefer Grey's Anatomy over House"
 },
 {
   category: "TV Shows",
-  title: "Bojack Horseman or Rick and Morty?"
+  title: "I prefer Bojack Horseman over Rick and Morty"
 },
 {
   category: "TV Shows",
-  title: "Black Mirror or The Walking Dead?"
+  title: "I prefer Black Mirror over The Walking Dead"
 },
 {
   category: "Miscellaneous",
@@ -347,18 +347,18 @@ Question.create!([
 }]
 )
 
-question_1 = Question.find_by(title: "Green or Blue?")
-question_2 = Question.find_by(title: "Orange or Black?")
-question_3 = Question.find_by(title: "Red or Teal?")
-question_4 = Question.find_by(title: "Purple or Yellow?")
-question_5 = Question.find_by(title: "Rock or Reggae?")
-question_6 = Question.find_by(title: "Alternative or Hip-Hop?")
-question_7 = Question.find_by(title: "EDM or Country?")
-question_8 = Question.find_by(title: "Pop or Classical?")
-question_9 = Question.find_by(title: "Breaking Bad or Sons of Anarchy?")
-question_10 = Question.find_by(title: "Grey's Anatomy or House?")
-question_11 = Question.find_by(title: "Bojack Horseman or Rick and Morty?")
-question_12 = Question.find_by(title: "Black Mirror or The Walking Dead?")
+question_1 = Question.find_by(title: "I prefer Green over Blue")
+question_2 = Question.find_by(title: "I prefer Orange over Black")
+question_3 = Question.find_by(title: "I prefer Red over Teal")
+question_4 = Question.find_by(title: "I prefer Purple over Yellow")
+question_5 = Question.find_by(title: "I prefer Rock over Reggae")
+question_6 = Question.find_by(title: "I prefer Alternative over Hip-Hop")
+question_7 = Question.find_by(title: "I prefer EDM over Country")
+question_8 = Question.find_by(title: "I prefer Pop over Classical")
+question_9 = Question.find_by(title: "I prefer Breaking Bad over Sons of Anarchy")
+question_10 = Question.find_by(title: "I prefer Grey's Anatomy over House")
+question_11 = Question.find_by(title: "I prefer Bojack Horseman over Rick and Morty")
+question_12 = Question.find_by(title: "I prefer Black Mirror over The Walking Dead")
 question_13 = Question.find_by(title: "I am a morning person")
 question_14 = Question.find_by(title: "I like pineapples on pizza")
 question_15 = Question.find_by(title: "I prefer iPhones over Android Phones")
@@ -369,30 +369,30 @@ question_19 = Question.find_by(title: "We all have a predetermined destiny")
 question_20 = Question.find_by(title: "Life is a purposeless void")
 
 
-question_1_response_1 = Answer.create!(question_id: question_1.id, response: "Green")
-question_1_response_2 = Answer.create!(question_id: question_1.id, response: "Blue")
-question_2_response_1 = Answer.create!(question_id: question_2.id, response: "Orange")
-question_2_response_2 = Answer.create!(question_id: question_2.id, response: "Black")
-question_3_response_1 = Answer.create!(question_id: question_3.id, response: "Red")
-question_3_response_2 = Answer.create!(question_id: question_3.id, response: "Teal")
-question_4_response_1 = Answer.create!(question_id: question_4.id, response: "Purple")
-question_4_response_2 = Answer.create!(question_id: question_4.id, response: "Yellow")
-question_5_response_1 = Answer.create!(question_id: question_5.id, response: "Rock")
-question_5_response_2 = Answer.create!(question_id: question_5.id, response: "Reggae")
-question_6_response_1 = Answer.create!(question_id: question_6.id, response: "Alternative")
-question_6_response_2 = Answer.create!(question_id: question_6.id, response: "Hip-Hop")
-question_7_response_1 = Answer.create!(question_id: question_7.id, response: "EDM")
-question_7_response_2 = Answer.create!(question_id: question_7.id, response: "Country")
-question_8_response_1 = Answer.create!(question_id: question_8.id, response: "Pop")
-question_8_response_2 = Answer.create!(question_id: question_8.id, response: "Classical")
-question_9_response_1 = Answer.create!(question_id: question_9.id, response: "Sons of Anarchy")
-question_9_response_2 = Answer.create!(question_id: question_9.id, response: "Breaking Bad")
-question_10_response_1 = Answer.create!(question_id: question_10.id, response: "Grey's Anatomy")
-question_10_response_2 = Answer.create!(question_id: question_10.id, response: "House")
-question_11_response_1 = Answer.create!(question_id: question_11.id, response: "Bojack Horseman")
-question_11_response_2 = Answer.create!(question_id: question_11.id, response: "Rick and Morty")
-question_12_response_1 = Answer.create!(question_id: question_12.id, response: "Black Mirror")
-question_12_response_2 = Answer.create!(question_id: question_12.id, response: "The Walking Dead")
+question_1_response_1 = Answer.create!(question_id: question_1.id, response: "Yes")
+question_1_response_2 = Answer.create!(question_id: question_1.id, response: "No")
+question_2_response_1 = Answer.create!(question_id: question_2.id, response: "Yes")
+question_2_response_2 = Answer.create!(question_id: question_2.id, response: "No")
+question_3_response_1 = Answer.create!(question_id: question_3.id, response: "Yes")
+question_3_response_2 = Answer.create!(question_id: question_3.id, response: "No")
+question_4_response_1 = Answer.create!(question_id: question_4.id, response: "Yes")
+question_4_response_2 = Answer.create!(question_id: question_4.id, response: "No")
+question_5_response_1 = Answer.create!(question_id: question_5.id, response: "Yes")
+question_5_response_2 = Answer.create!(question_id: question_5.id, response: "No")
+question_6_response_1 = Answer.create!(question_id: question_6.id, response: "Yes")
+question_6_response_2 = Answer.create!(question_id: question_6.id, response: "No")
+question_7_response_1 = Answer.create!(question_id: question_7.id, response: "Yes")
+question_7_response_2 = Answer.create!(question_id: question_7.id, response: "No")
+question_8_response_1 = Answer.create!(question_id: question_8.id, response: "Yes")
+question_8_response_2 = Answer.create!(question_id: question_8.id, response: "No")
+question_9_response_1 = Answer.create!(question_id: question_9.id, response: "Yes")
+question_9_response_2 = Answer.create!(question_id: question_9.id, response: "No")
+question_10_response_1 = Answer.create!(question_id: question_10.id, response: "Yes")
+question_10_response_2 = Answer.create!(question_id: question_10.id, response: "No")
+question_11_response_1 = Answer.create!(question_id: question_11.id, response: "Yes")
+question_11_response_2 = Answer.create!(question_id: question_11.id, response: "No")
+question_12_response_1 = Answer.create!(question_id: question_12.id, response: "Yes")
+question_12_response_2 = Answer.create!(question_id: question_12.id, response: "No")
 question_13_response_1 = Answer.create!(question_id: question_13.id, response: "Yes")
 question_13_response_2 = Answer.create!(question_id: question_13.id, response: "No")
 question_14_response_1 = Answer.create!(question_id: question_14.id, response: "Yes")
@@ -409,6 +409,17 @@ question_19_response_1 = Answer.create!(question_id: question_19.id, response: "
 question_19_response_2 = Answer.create!(question_id: question_19.id, response: "No")
 question_20_response_1 = Answer.create!(question_id: question_20.id, response: "Yes")
 question_20_response_2 = Answer.create!(question_id: question_20.id, response: "No")
+
+
+
+description_question_1 = Description.create!(title: "Favorite thing about the place that I live")
+description_question_2 = Description.create!(title: "What I'm doing with my life")
+description_question_3 = Description.create!(title: "My weirdest quirk")
+description_question_4 = Description.create!(title: "I couldn't function without this app")
+description_question_4 = Description.create!(title: "I couldn't function without this app")
+description_question_5 = Description.create!(title: "A perfect day")
+
+
 
 User.all.each do |user|
   Question.all.each do |question|

@@ -34,7 +34,8 @@ class UserDetail extends React.Component {
             <h1>{user.first_name}</h1>
             <div>
               <p>{user.age}</p>
-              <p>{user.zipcode}</p>
+              <p>{user.motto}</p>
+              <p>{user.state}</p>
             </div>
           </div>
         </div>

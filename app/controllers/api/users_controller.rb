@@ -3,6 +3,10 @@ class Api::UsersController < ApplicationController
   # before_action :require_login
 
   def index
+    # @users = User.all.each do |user|
+    #           user.city = user.get_city
+    #           user.state = user.get_state
+    #         end
     @users = User.all
     render '/api/users/index'
   end
