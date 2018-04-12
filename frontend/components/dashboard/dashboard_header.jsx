@@ -8,6 +8,7 @@ class DashboardHeader extends React.Component {
     // console.log("dashboard_header props", this.props);
     this.logoutUser = this.logoutUser.bind(this);
     this.browseMatches = this.browseMatches.bind(this);
+    this.goHome = this.goHome.bind(this);
   }
 
   logoutUser() {
@@ -18,13 +19,17 @@ class DashboardHeader extends React.Component {
     this.props.history.push('/match');
   }
 
+  goHome() {
+    this.props.history.push('/');
+  }
+
   render() {
     return (
       <div className="dashboard-header">
 
         <div className="dashboard-header-group">
           <ul className="dashboard-header-left">
-            <li>Logo</li>
+            <li onClick={this.goHome}>Logo</li>
             <li onClick={this.browseMatches}>Browse Matches</li>
           </ul>
 

@@ -9,6 +9,7 @@
   font-size: 12px;
   font-weight: lighter;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .dashboard-header {
@@ -108,11 +109,11 @@
 
 /* ======== Dashboard Snapshots ========= */
 
-.snapshots-carousel h1 {
+/* .snapshots-carousel h1 {
   margin-top: 50px;
   margin-bottom: 15px;
   font-weight: bold;
-}
+} */
 
 .snapshots-carousel {
   width: 900px;
@@ -121,20 +122,26 @@
 }
 
 .snapshot-slider img {
-  height: 200px;
-  width: 150px;
+  border-radius: 3px 3px 0 0;
+  height: 160px;
+  width: 160px;
   object-fit: cover;
-  border-radius: 2px;
 }
 
+
 .snapshot-slider p {
-  height: 100px;
-  width: 150px;
-  background-color: white;
-  color: #9da2ac;
-  text-align: center;
   font-size: 13px;
-  border-radius: 3px;
+  color: #9da2ac;
+}
+
+.snapshot-caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 3px 3px;
+  background-color: white;
+  height: 100px;
+  width: 160px;
 }
 
 

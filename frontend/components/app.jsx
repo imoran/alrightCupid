@@ -6,6 +6,8 @@ import DashboardContainer from './dashboard/dashboard_container';
 import HomePageContainer from './homepage/home_page_container';
 import Modal from './homepage/signin/modal';
 import MatchContainer from './match/match_container';
+import UserDetailContainer from './details/user_detail_container';
+
 
 const App = () => (
   <div>
@@ -14,6 +16,7 @@ const App = () => (
       <AuthRoute exact path="/" component={HomePageContainer} />
       <ProtectedRoute exact path="/dashboard" component={DashboardContainer} />
       <ProtectedRoute exact path="/match" component={MatchContainer} />
+        <Route path="/users/:userId" component={UserDetailContainer} />
     </Switch>
   </div>
 );

@@ -201,7 +201,7 @@ User.create!([{
     age: 30,
     image_url: "https://images.pexels.com/photos/428333/pexels-photo-428333.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'sunburn'
+    motto: 'Trying to photograph a mongoose'
   },
   {
     first_name: "Jerry",
@@ -237,7 +237,7 @@ User.create!([{
     age: 20,
     image_url: "https://images.pexels.com/photos/819482/pexels-photo-819482.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'Trying to photograph a mongoose'
+    motto: 'I habitually climb things'
   },
   {
     first_name: "Connor",
@@ -249,7 +249,7 @@ User.create!([{
     age: 38,
     image_url: "https://images.pexels.com/photos/7823/selfie.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'I habitually climb things'
+    motto: 'sunburn'
   },
   {
     first_name: "Ethan",

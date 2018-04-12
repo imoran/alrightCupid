@@ -1,11 +1,18 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { withRouter } from 'react-router-dom';
 
 
 class FeaturedIndex extends React.Component {
   componentDidMount() {
     this.props.requestAllUsers();
     // .then(() => console.log("Featured index props =>", this.props));
+  }
+
+  userProfile(id) {
+    return () => {
+      this.props.history.push(`/users/${id}`);
+    };
   }
 
   render() {
@@ -21,12 +28,12 @@ class FeaturedIndex extends React.Component {
       <div className="dashboard-featured">
         <div className="featured-carousel">
           <Slider {...settings}>
-            {users.map(function(el, idx) {
-              return (
-                <div className="slider-img" key={idx}>
-                  <h3><img src={el.image_url} />{el.first_name}</h3>
-                </div>);
-              })}
+            {users.map((el, idx) => (
+              <div className="slider-img" key={idx}
+                onClick={this.userProfile(el.id)}>
+                <h3><img src={el.image_url} />{el.first_name}</h3>
+              </div>
+              ))}
             </Slider>
         </div>
       </div>
@@ -34,4 +41,4 @@ class FeaturedIndex extends React.Component {
   }
 }
 
-export default FeaturedIndex;
+export default withRouter(FeaturedIndex);
