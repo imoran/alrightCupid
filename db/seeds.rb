@@ -22,9 +22,7 @@ User.create!([{
     age: 27,
     image_url: 'https://images.pexels.com/photos/818654/pexels-photo-818654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     password: 'password',
-    motto: 'Pretending I know what I\'m doing',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'Pretending I know what I\'m doing'
   },
   {
     first_name: "Marie",
@@ -36,9 +34,7 @@ User.create!([{
     age: 27,
     image_url: "https://images.pexels.com/photos/324658/pexels-photo-324658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'Burning Man 2017',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'Burning Man 2017'
   },
   {
     first_name: "Cassie",
@@ -50,9 +46,7 @@ User.create!([{
     age: 25,
     image_url: "https://images.pexels.com/photos/372042/pexels-photo-372042.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'My true form',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'My true form'
   },
   {
     first_name: "Andrea",
@@ -64,9 +58,7 @@ User.create!([{
     age: 34,
     image_url: "https://images.pexels.com/photos/712521/pexels-photo-712521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'Best Buddy!',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'Best Buddy!'
   },
   {
     first_name: "Marjorie",
@@ -78,9 +70,7 @@ User.create!([{
     age: 29,
     image_url: "https://images.pexels.com/photos/720327/pexels-photo-720327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'I think this speaks for itself',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'I think this speaks for itself'
   },
   {
     first_name: "Monica",
@@ -92,9 +82,7 @@ User.create!([{
     age: 18,
     image_url: "https://images.pexels.com/photos/720598/pexels-photo-720598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'Triangles yeah !',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'Triangles yeah !'
   },
   {
     first_name: "Lana",
@@ -106,9 +94,7 @@ User.create!([{
     age: 26,
     image_url: "https://images.pexels.com/photos/594421/pexels-photo-594421.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'I like places that require hard hats',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'I like places that require hard hats'
   },
   {
     first_name: "Melissa",
@@ -120,9 +106,7 @@ User.create!([{
     age: 39,
     image_url: "https://images.pexels.com/photos/354951/pexels-photo-354951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password",
-    motto: 'Tahoe 2015',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'Tahoe 2015'
   },
   {
     first_name: "Carly",
@@ -134,9 +118,7 @@ User.create!([{
     age: 20,
     image_url: "https://images.pexels.com/photos/264614/pexels-photo-264614.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'Being obnoxious',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'Being obnoxious'
   },
   {
     first_name: "Geraldine",
@@ -148,9 +130,7 @@ User.create!([{
     age: 36,
     image_url: "https://images.pexels.com/photos/109851/pexels-photo-109851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password",
-    motto: 'sick mirror door near work',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'sick mirror door near work'
   },
   {
     first_name: "Julia",
@@ -162,9 +142,7 @@ User.create!([{
     age: 28,
     image_url: "https://images.pexels.com/photos/774095/pexels-photo-774095.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password",
-    motto: 'Metal',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'Metal'
   },
   {
     first_name: "Richard",
@@ -176,9 +154,7 @@ User.create!([{
     age: 29,
     image_url: "https://images.pexels.com/photos/826380/pexels-photo-826380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password",
-    motto: 'Not sure why I added this photo',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'Not sure why I added this photo'
   },
   {
     first_name: "Noah",
@@ -190,9 +166,7 @@ User.create!([{
     age: 28,
     image_url: "https://images.pexels.com/photos/185847/pexels-photo-185847.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password",
-    motto: 'Books. Sleeping',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'Books. Sleeping'
   },
   {
     first_name: "James",
@@ -204,9 +178,7 @@ User.create!([{
     age: 35,
     image_url: "https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password",
-    motto: 'Is any explanation needed?',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'Is any explanation needed?'
   },
   {
     first_name: "Rick",
@@ -218,9 +190,7 @@ User.create!([{
     age: 34,
     image_url: "https://images.pexels.com/photos/247917/pexels-photo-247917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'rocking chair revolutionary',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'rocking chair revolutionary'
   },
   {
     first_name: "Alexander",
@@ -232,9 +202,7 @@ User.create!([{
     age: 30,
     image_url: "https://images.pexels.com/photos/428333/pexels-photo-428333.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'Trying to photograph a mongoose',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'Trying to photograph a mongoose'
   },
   {
     first_name: "Jerry",
@@ -246,9 +214,7 @@ User.create!([{
     age: 24,
     image_url: "https://images.pexels.com/photos/274593/pexels-photo-274593.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'Trying to make my friend look tall',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'Trying to make my friend look tall'
   },
   {
     first_name: "Jeremiah",
@@ -260,9 +226,7 @@ User.create!([{
     age: 27,
     image_url: "https://images.pexels.com/photos/434704/pexels-photo-434704.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'Not my accordion )\':',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'Not my accordion )\':'
   },
   {
     first_name: "Johnathan",
@@ -274,9 +238,7 @@ User.create!([{
     age: 20,
     image_url: "https://images.pexels.com/photos/819482/pexels-photo-819482.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'I habitually climb things',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'I habitually climb things'
   },
   {
     first_name: "Connor",
@@ -288,9 +250,7 @@ User.create!([{
     age: 38,
     image_url: "https://images.pexels.com/photos/7823/selfie.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'sunburn',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'sunburn'
   },
   {
     first_name: "Ethan",
@@ -302,9 +262,7 @@ User.create!([{
     age: 34,
     image_url: "https://images.pexels.com/photos/59576/pexels-photo-59576.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'Sneaking some pets',
-    city: "San Francisco",
-    state: "CA"
+    motto: 'Sneaking some pets'
   }])
 
 Question.create!([
@@ -456,11 +414,12 @@ question_20_response_2 = Answer.create!(question_id: question_20.id, response: "
 
 
 description_question_1 = Description.create!(title: "Favorite thing about the place that I live")
-description_question_2 = Description.create!(title: "What I'm doing with my life")
-description_question_3 = Description.create!(title: "My weirdest quirk")
-description_question_4 = Description.create!(title: "I couldn't function without this app")
-description_question_4 = Description.create!(title: "I couldn't function without this app")
-description_question_5 = Description.create!(title: "A perfect day")
+description_question_2 = Description.create!(title: "My weirdest quirk")
+description_question_3 = Description.create!(title: "I couldn't function without this app")
+description_question_4 = Description.create!(title: "A perfect day")
+
+DescriptionResponse.create!(description_id: description_question_1,
+user_id: 1)
 
 
 
@@ -468,5 +427,23 @@ User.all.each do |user|
   Question.all.each do |question|
     answer_id = question.answers.sample(1).pluck(:id)[0]
     QuestionResponse.create!(question_id: question.id, user_id: user.id, answer_id: answer_id)
+  end
+end
+
+random = ["The secret of happiness is total disregard of everybody", "Intolerance is the last defense of the insecure.
+", "People with narrow minds usually have broad tongues", "Tell the truth and run",
+"Go to Heaven for the climate, Hell for the company", "Now I lay me down to sleep I hear the sirens in the street All my dreams are made of chrome I have no way to get back home",
+"It ain't so much the things we don't know that get us in trouble. It's the things we know that ain't so.",
+"To know how to say what other people only think, is what makes poets and sages; and to dare to say what others only dare to think, makes men martyrs or reformers.",
+"They who talk much of destiny, their birth-star, etc., are in a lower dangerous plane, and invite the evils they fear.",
+"The atmosphere of our time is fast being cleared of the fumes and deadly gases that arose during the carboniferous age of theology.",
+"Anyone who stops learning is old, whether this happens at twenty or eighty. Anyone who keeps on learning not only remains young, but becomes constantly more valuable regardless of physical capacity.",
+"Maybe we're the fools, for thinking we know things. Maybe humans are the only ones who can deal with the fact that nothing can ever be known at all."]
+
+User.all.each do |user|
+  Descriptions.each do |description|
+    random.each do |r|
+      DescriptionResponse.create!(description_id: description.id, user_id: user.id, response: r)
+    end
   end
 end

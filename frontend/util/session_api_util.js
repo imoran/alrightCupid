@@ -35,19 +35,52 @@ export const getOneUser = id => {
   });
 };
 
-export const postResponse = (formResponse) => {
-  return $.ajax({
-    url: '/api/responses',
-    method: 'POST',
-    data: {
-      formResponse
-    }
-  });
-};
+// export const postResponse = (formResponse) => {
+//   return $.ajax({
+//     url: '/api/responses',
+//     method: 'POST',
+//     data: {
+//       formResponse
+//     }
+//   });
+// };
+
+// export const getAllResponses = () => {
+//   return $.ajax({
+//     url:
+//   })
+// }
 
 export const getAllQuestions = () => {
   return $.ajax({
     url: '/api/questions',
     method: 'GET'
+  });
+};
+
+export const getAllAnswers = () => {
+
+};
+
+export const postAnswer = () => {
+
+};
+
+export const receiveAllDescriptionQuestions = () => {
+  return $.ajax({
+    url: '/api/descriptions',
+    method: 'GET'
+  });
+};
+
+export const getSingleDescriptionResponse = () => {
+
+};
+
+export const updateSingleDescriptionResponse = (id, descriptionResponse) => {
+  return $.ajax({
+    url: `/api/descriptions/${id}`,
+    method: 'PATCH',
+    data: { descriptionResponse }
   });
 };

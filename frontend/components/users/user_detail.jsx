@@ -14,6 +14,7 @@ class UserDetail extends React.Component {
     .then(user => {
       this.setState({user: user.user});
     });
+    this.props.requestAllDescriptionQuestions();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -34,8 +35,11 @@ class UserDetail extends React.Component {
             <h1>{user.first_name}</h1>
             <div>
               <p>{user.age}</p>
-              <p>{user.motto}</p>
+              <p>{user.city}</p>
               <p>{user.state}</p>
+            </div>
+            <div>
+              
             </div>
           </div>
         </div>
