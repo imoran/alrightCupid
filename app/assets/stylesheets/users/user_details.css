@@ -1,0 +1,60 @@
+
+.users-main-body {
+  background-color: #104ca0;
+}
+
+.users-background-blue {
+  height: 70px;
+  width: 100%;
+}
+
+
+
+.user-group {
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  /* padding: 50px 0; */
+}
+
+
+.user-group img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  top: 50px;
+}
+
+.user-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  color: white;
+}
+
+.user-description h1 {
+  font-size: 30px;
+  font-weight: lighter;
+  font-family: 'GT America',sans-serif;
+}
+
+.user-description p {
+  font-size: 15px;
+  font-weight: 100;
+  margin-right: 10px;
+}
+
+.user-description div {
+  display: flex;
+  flex-direction: row;
+}
+
+.xx {
+  width: 100%;
+  height: 1000px;
+  background-color: #ffff;
+}
