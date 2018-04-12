@@ -10,6 +10,7 @@ User.delete_all
 Question.delete_all
 Answer.delete_all
 QuestionResponse.delete_all
+Description.delete_all
 
 User.create!([{
     username: 'demo@demo.com',
@@ -21,7 +22,9 @@ User.create!([{
     age: 27,
     image_url: 'https://images.pexels.com/photos/818654/pexels-photo-818654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     password: 'password',
-    motto: 'Pretending I know what I\'m doing'
+    motto: 'Pretending I know what I\'m doing',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Marie",
@@ -33,7 +36,9 @@ User.create!([{
     age: 27,
     image_url: "https://images.pexels.com/photos/324658/pexels-photo-324658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'Burning Man 2017'
+    motto: 'Burning Man 2017',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Cassie",
@@ -45,7 +50,9 @@ User.create!([{
     age: 25,
     image_url: "https://images.pexels.com/photos/372042/pexels-photo-372042.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'My true form'
+    motto: 'My true form',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Andrea",
@@ -57,7 +64,9 @@ User.create!([{
     age: 34,
     image_url: "https://images.pexels.com/photos/712521/pexels-photo-712521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'Best Buddy!'
+    motto: 'Best Buddy!',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Marjorie",
@@ -69,7 +78,9 @@ User.create!([{
     age: 29,
     image_url: "https://images.pexels.com/photos/720327/pexels-photo-720327.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'I think this speaks for itself'
+    motto: 'I think this speaks for itself',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Monica",
@@ -81,7 +92,9 @@ User.create!([{
     age: 18,
     image_url: "https://images.pexels.com/photos/720598/pexels-photo-720598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'Triangles yeah !'
+    motto: 'Triangles yeah !',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Lana",
@@ -93,7 +106,9 @@ User.create!([{
     age: 26,
     image_url: "https://images.pexels.com/photos/594421/pexels-photo-594421.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'I like places that require hard hats'
+    motto: 'I like places that require hard hats',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Melissa",
@@ -105,7 +120,9 @@ User.create!([{
     age: 39,
     image_url: "https://images.pexels.com/photos/354951/pexels-photo-354951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password",
-    motto: 'Tahoe 2015'
+    motto: 'Tahoe 2015',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Carly",
@@ -117,7 +134,9 @@ User.create!([{
     age: 20,
     image_url: "https://images.pexels.com/photos/264614/pexels-photo-264614.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'Being obnoxious'
+    motto: 'Being obnoxious',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Geraldine",
@@ -129,7 +148,9 @@ User.create!([{
     age: 36,
     image_url: "https://images.pexels.com/photos/109851/pexels-photo-109851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password",
-    motto: 'sick mirror door near work'
+    motto: 'sick mirror door near work',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Julia",
@@ -141,7 +162,9 @@ User.create!([{
     age: 28,
     image_url: "https://images.pexels.com/photos/774095/pexels-photo-774095.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password",
-    motto: 'Metal'
+    motto: 'Metal',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Richard",
@@ -153,7 +176,9 @@ User.create!([{
     age: 29,
     image_url: "https://images.pexels.com/photos/826380/pexels-photo-826380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password",
-    motto: 'Not sure why I added this photo'
+    motto: 'Not sure why I added this photo',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Noah",
@@ -165,7 +190,9 @@ User.create!([{
     age: 28,
     image_url: "https://images.pexels.com/photos/185847/pexels-photo-185847.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password",
-    motto: 'Books. Sleeping'
+    motto: 'Books. Sleeping',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "James",
@@ -177,7 +204,9 @@ User.create!([{
     age: 35,
     image_url: "https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     password: "password",
-    motto: 'Is any explanation needed?'
+    motto: 'Is any explanation needed?',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Rick",
@@ -189,7 +218,9 @@ User.create!([{
     age: 34,
     image_url: "https://images.pexels.com/photos/247917/pexels-photo-247917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'rocking chair revolutionary'
+    motto: 'rocking chair revolutionary',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Alexander",
@@ -201,7 +232,9 @@ User.create!([{
     age: 30,
     image_url: "https://images.pexels.com/photos/428333/pexels-photo-428333.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'Trying to photograph a mongoose'
+    motto: 'Trying to photograph a mongoose',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Jerry",
@@ -213,7 +246,9 @@ User.create!([{
     age: 24,
     image_url: "https://images.pexels.com/photos/274593/pexels-photo-274593.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'Trying to make my friend look tall'
+    motto: 'Trying to make my friend look tall',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Jeremiah",
@@ -225,7 +260,9 @@ User.create!([{
     age: 27,
     image_url: "https://images.pexels.com/photos/434704/pexels-photo-434704.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'Not my accordion )\':'
+    motto: 'Not my accordion )\':',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Johnathan",
@@ -237,7 +274,9 @@ User.create!([{
     age: 20,
     image_url: "https://images.pexels.com/photos/819482/pexels-photo-819482.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'I habitually climb things'
+    motto: 'I habitually climb things',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Connor",
@@ -249,7 +288,9 @@ User.create!([{
     age: 38,
     image_url: "https://images.pexels.com/photos/7823/selfie.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'sunburn'
+    motto: 'sunburn',
+    city: "San Francisco",
+    state: "CA"
   },
   {
     first_name: "Ethan",
@@ -261,7 +302,9 @@ User.create!([{
     age: 34,
     image_url: "https://images.pexels.com/photos/59576/pexels-photo-59576.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     password: "password",
-    motto: 'Sneaking some pets'
+    motto: 'Sneaking some pets',
+    city: "San Francisco",
+    state: "CA"
   }])
 
 Question.create!([
