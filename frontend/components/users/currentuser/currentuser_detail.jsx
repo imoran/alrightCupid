@@ -2,6 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import DashboardHeaderContainer from '../../dashboard/dashboard_header_container';
 import DashboardFooter from '../../dashboard/dashboard_footer';
+import FormIndex from './form_index';
 
 
 class CurrentUserDetail extends React.Component {
@@ -10,7 +11,7 @@ class CurrentUserDetail extends React.Component {
     this.state = {
       user: {},
       description_questions: [],
-      description_responses: [],
+      description_responses: {1: "", 2: "", 3: "", 4: ""}
     };
     console.log("current User detail props =>", this.props);
 
@@ -19,8 +20,7 @@ class CurrentUserDetail extends React.Component {
   componentDidMount() {
     this.props.receiveAllDescriptionQuestions()
     .then(question => {
-      this.setState({ description_questions: this.props.description_questions,
-      description_responses: this.props.description_responses });
+      this.setState({ description_questions: this.props.description_questions });
     });
     this.props.requestSingleUser(this.props.match.params.userId)
     .then(user => {
@@ -32,6 +32,13 @@ class CurrentUserDetail extends React.Component {
     if (this.props.match.params.userId !== nextProps.match.params.userId) {
       this.props.requestSingleUser(nextProps.match.params.userId);
     }
+  }
+
+
+  handleChange(id) {
+    return (e) => {
+      this.setState({ description_responses: {[id]: e.target.value}});
+    };
   }
 
   render() {
@@ -58,11 +65,7 @@ class CurrentUserDetail extends React.Component {
               {
                 this.state.description_questions.map(question =>
                   <div>
-                    <label key={question.id}>{question.title}</label>
-                    <input type="textarea"
-                      value={this.props.currentUser.description_responses}
-                      ></input>
-                    <p>{this.props.currentUser.description_responses}</p>
+                    <FormIndex question={question} currentUser={this.props.currentUser}/>
                   </div>
                 )
               }
@@ -80,7 +83,10 @@ export default CurrentUserDetail;
 
 
 
-
+// <label key={question.id}>{question.title}</label>
+// <input type="textarea"
+//   value={this.state.description_responses[question.id]}
+//   onChange={this.handleChange(question.id)}></input>
 
 
 // <div className="users-main-body">

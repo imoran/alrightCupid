@@ -80,6 +80,10 @@ export const receiveAllDescriptionQuestions = () => {
 };
 
 
-// export const postDescriptionResponses = (data) => {
-//
-// }
+export const postDescriptionResponses = (description_responses) => {
+  return $.ajax({
+    url: '/api/description_responses',
+    method: 'POST',
+    data: { description_responses }
+  });
+};

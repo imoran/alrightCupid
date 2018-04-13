@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :questions, only: [:index]
     #responses will change
     resources :question_answers, only: [:index, :create]
-    resources :description_responses, only: [:index, :create, :update]
+    resources :description_responses, only: [:index, :create, :update, :show]
     resources :question_responses, only: [:index, :show]
     resources :descriptions, only: [:index]
 
