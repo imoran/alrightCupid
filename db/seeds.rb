@@ -427,14 +427,14 @@ User.all.each do |user|
   end
 end
 
-random = ["The secret of happiness is total disregard of everybody", "Intolerance is the last defense of the insecure.
-", "People with narrow minds usually have broad tongues", "Tell the truth and run",
-"Go to Heaven for the climate, Hell for the company", "Now I lay me down to sleep I hear the sirens in the street All my dreams are made of chrome I have no way to get back home",
+random = ["The secret of happiness is total disregard of everybody.", "Intolerance is the last defense of the insecure.
+", "People with narrow minds usually have broad tongues.", "Tell the truth and run.",
+"Go to Heaven for the climate, Hell for the company.", "Now I lay me down to sleep I hear the sirens in the street All my dreams are made of chrome I have no way to get back home.",
 "It ain't so much the things we don't know that get us in trouble. It's the things we know that ain't so.",
 "To know how to say what other people only think, is what makes poets and sages; and to dare to say what others only dare to think, makes men martyrs or reformers.",
 "They who talk much of destiny, their birth-star, etc., are in a lower dangerous plane, and invite the evils they fear.",
 "The atmosphere of our time is fast being cleared of the fumes and deadly gases that arose during the carboniferous age of theology.",
-"Anyone who stops learning is old, whether this happens at twenty or eighty. Anyone who keeps on learning not only remains young, but becomes constantly more valuable regardless of physical capacity.",
+"Listening to both sides of a story will convince you that there is more to a story than both sides.",
 "Maybe we're the fools, for thinking we know things. Maybe humans are the only ones who can deal with the fact that nothing can ever be known at all."]
 
 User.all.each do |user|
@@ -443,3 +443,14 @@ User.all.each do |user|
     DescriptionResponse.create!(description_id: description.id, user_id: user.id, response: r)
   end
 end
+# {
+#   this.state.description_questions.map(question =>
+#     <div>
+#       <h1 key={question.id}>{question.title}</h1>
+#     </div>
+#   )
+# }
+
+# if (!this.props.description_responses) {
+#   return null
+# }

@@ -8,14 +8,16 @@ class UserDetail extends React.Component {
     super(props);
     this.state = {
       user: {},
-      description_questions: []
+      description_questions: [],
+      description_responses: []
     };
   }
 
   componentDidMount() {
     this.props.receiveAllDescriptionQuestions()
     .then(question => {
-      this.setState({ description_questions: this.props.description_questions });
+      this.setState({ description_questions: this.props.description_questions,
+      description_responses: this.props.description_responses });
     });
     this.props.requestSingleUser(this.props.match.params.userId)
     .then(user => {
@@ -51,11 +53,14 @@ class UserDetail extends React.Component {
 
         <div className="xx">
           <div className="user-description-questions">
-            {
-              this.state.description_questions.map(question =>
-                <p key={question.id}>{question.title}</p>
-              )
-            }
+             {
+               this.state.description_questions.map(question =>
+                 <div>
+                   <h1 key={question.id}>{question.title}</h1>
+                   <p>{ user ? user.description_responses : "hi" }</p>
+                 </div>
+               )
+             }
           </div>
         </div>
         <DashboardFooter />

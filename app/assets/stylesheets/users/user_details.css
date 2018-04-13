@@ -65,9 +65,13 @@
   margin: 0 auto;
   position: relative;
   top: 80px;
+}
+
+.user-description-questions h1 {
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .user-description-questions p {
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 }
