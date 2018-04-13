@@ -25,13 +25,20 @@ location
 
 ![signup](https://github.com/imoran/alrightCupid/blob/master/signup.png)
 
-All of this information is being passed as part of the signin slice of the state.
+All of this information is being passed as part of the signup slice of the state. Here is a sample
 
-```js
+```javascript
 {
   entities: {
     ui: {
-      signin:
+      signup: {
+        age: 25,
+        first_name: "Bob",
+        gender: "Other",
+        orientation: "Other",
+        location: "United States",
+        zipcode: "94105"
+      }
       modal:
     },
     errors: {
@@ -44,7 +51,39 @@ All of this information is being passed as part of the signin slice of the state
 }
 ```
 
-As it progresses through
+Custom error messages are displayed when information is missing.
+
+![signup]('https://github.com/imoran/alrightCupid/blob/master/signup_errors.png')
+
+```javascript
+  // all errors are kept in local state and when any of the categories are missing,
+  // it adds that specific error to the array, and so we render as many errors as there were present.
+
+  this.state = {
+    first_name: '',
+    month: 'Month',
+    day: 'Day',
+    year: 'Year',
+    location: 'United States',
+    zipcode: '',
+    nameError: [],
+    zipError: [],
+    birthError: []
+  };
+
+  let nameError = first_name.length === 0 ? ['Sorry, your name can’t be blank.'] : [];
+  let zipError = zipcode.length !== 5 ? ['Location is required.'] : [];
+  let birthError = [];
+  if (month === 'Month' || day === 'Day' || year === 'Year') {
+    birthError = ["Something's missing!"];
+  } else if ((currentYear - year) < 18 ) {
+    birthError = ["You must be at least 18 years old to use AlrightCupid."];
+  }
+```
+
+
+
+
 
 
 
