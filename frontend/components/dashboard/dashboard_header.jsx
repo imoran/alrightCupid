@@ -9,6 +9,7 @@ class DashboardHeader extends React.Component {
     this.logoutUser = this.logoutUser.bind(this);
     this.browseMatches = this.browseMatches.bind(this);
     this.goHome = this.goHome.bind(this);
+    this.goToProfilePage = this.goToProfilePage.bind(this);
   }
 
   logoutUser() {
@@ -23,6 +24,10 @@ class DashboardHeader extends React.Component {
     this.props.history.push('/');
   }
 
+  goToProfilePage() {
+    this.props.history.push('/profile');
+  }
+
   render() {
     return (
       <div className="dashboard-header">
@@ -34,7 +39,7 @@ class DashboardHeader extends React.Component {
           </ul>
 
           <ul className="dashboard-header-right">
-            <li>Profile</li>
+            <li onClick={this.goToProfilePage}>Profile</li>
             <li><button className="logout-button" onClick={this.logoutUser}>Logout</button></li>
           </ul>
         </div>

@@ -7,7 +7,7 @@ class QuestionsIndex extends React.Component {
     super(props);
     this.state = {
       currentQuestion: {},
-      response: '',
+      question_answers: [],
       questions: []
     };
   }
@@ -15,10 +15,9 @@ class QuestionsIndex extends React.Component {
   componentDidMount() {
     this.props.receiveQuestions()
     .then(() => {
-      this.setState({questions: this.props.questions});
-      // console.log("QuestionsIndex props =>", this.props);
-      console.log("this.state ", this.state);
+      this.setState({questions: this.props.questions });
     });
+    console.log("QUESTIONS INDEX STÅTE", this.state);
   }
 
   yes(e) {
@@ -38,16 +37,20 @@ class QuestionsIndex extends React.Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      arrows: false,
+      draggable: true
     };
     return (
       <div className="dashboard-questions">
+        <h1>IMPROVE YOUR MATCHES</h1>
         <Slider {...settings} className="dashboard-question-box">
           {questions.map((el, idx) => (
             <div key={idx}>
-              <h1>IMPROVE YOUR MATCHES</h1>
               {el.title}
-              <button onClick={this.yes}>Yes</button>
-              <button onClick={this.no}>No</button>
+              <div>
+                <button onClick={this.yes}>Yes</button>
+                <button onClick={this.no}>No</button>
+              </div>
             </div>
           ))}
         </Slider>

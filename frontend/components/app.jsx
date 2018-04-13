@@ -7,6 +7,8 @@ import HomePageContainer from './homepage/home_page_container';
 import Modal from './homepage/signin/modal';
 import MatchContainer from './match/match_container';
 import UserDetailContainer from './users/user_detail_container';
+import CurrentUserDetailContainer from './users/currentuser/currentuser_detail_container';
+
 
 
 const App = () => (
@@ -16,7 +18,8 @@ const App = () => (
       <AuthRoute exact path="/" component={HomePageContainer} />
       <ProtectedRoute exact path="/dashboard" component={DashboardContainer} />
       <ProtectedRoute exact path="/match" component={MatchContainer} />
-        <Route path="/users/:userId" component={UserDetailContainer} />
+      <Route path="/users/:userId" component={UserDetailContainer} />
+      <ProtectedRoute exact path="/profile" component={CurrentUserDetailContainer} />
     </Switch>
   </div>
 );

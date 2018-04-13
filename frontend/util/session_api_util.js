@@ -78,3 +78,8 @@ export const receiveAllDescriptionQuestions = () => {
     method: 'GET'
   });
 };
+
+
+// export const postDescriptionResponses = (data) => {
+//
+// }

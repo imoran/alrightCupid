@@ -9,7 +9,7 @@ class UserDetail extends React.Component {
     this.state = {
       user: {},
       description_questions: [],
-      description_responses: []
+      description_responses: [],
     };
   }
 
@@ -23,7 +23,6 @@ class UserDetail extends React.Component {
     .then(user => {
       this.setState({user: user.user});
     });
-
   }
 
   componentWillReceiveProps(nextProps) {
@@ -33,7 +32,9 @@ class UserDetail extends React.Component {
   }
 
   render() {
+    console.log("USER DETAIL PROPS", this.props);
     let { user } = this.state;
+    let { currentUser } = this.state;
     return (
       <div className="users-main-body">
         <DashboardHeaderContainer />
@@ -57,7 +58,7 @@ class UserDetail extends React.Component {
                this.state.description_questions.map(question =>
                  <div>
                    <h1 key={question.id}>{question.title}</h1>
-                   <p>{ user ? user.description_responses : "hi" }</p>
+                   <p>{user.description_responses}</p>
                  </div>
                )
              }
