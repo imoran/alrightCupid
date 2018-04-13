@@ -81,8 +81,46 @@ Custom error messages are displayed when information is missing.
   }
 ```
 
-Finally, it gets the users'
+Finally, it gets the users' username and password.
 
+This multi-step form made use of the signin slice of state, adding all the
+required fields in order to create a user.
+
+To avoid using different routes for each stage of the signin process,
+I created a nextStep field of the local state of each component that
+belonged to each stage. Each time the user clicked on the button that
+led to the next page, step would be increased by one and the respective component
+would be rendered
+
+```javascript
+  multiStep() {
+    let color = "#24d8f3";
+    switch (this.state.step) {
+      case 1:
+        return (
+          <div className={this.state.css}>
+            <HeaderContainer />
+            <Splash />
+            <SignUp1 nextStep={this.nextStep} />
+          </div>);
+      case 2:
+        return <SignUp2
+          nextStep={this.nextStep}
+          css={color}
+           />;
+      case 3:
+        return <SignUp3 css={color}/>;
+      default:
+        break;
+    }
+  }
+
+  nextStep() {
+    this.setState({
+      step : this.state.step + 1
+    });
+  }
+```
 
 
 
