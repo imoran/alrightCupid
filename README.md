@@ -27,7 +27,7 @@ location
 
 All of this information is being passed as part of the signup slice of the state. Here is a sample
 
-````javascript
+```javascript
 {
   entities: {
     ui: {
@@ -49,13 +49,13 @@ All of this information is being passed as part of the signup slice of the state
       currentUser: null
   }
 }
-````
+```
 
 Custom error messages are displayed when information is missing.
 
-![signup]('https://github.com/imoran/alrightCupid/blob/master/signup_errors.png')
+![signup_errors]('https://github.com/imoran/alrightCupid/blob/master/signup_errors.png')
 
-````javascript
+```javascript
   // all errors are kept in local state and when any of the categories are missing,
   // it adds that specific error to the array, and so we render as many errors as there were present.
 
@@ -79,7 +79,7 @@ Custom error messages are displayed when information is missing.
   } else if ((currentYear - year) < 18 ) {
     birthError = ["You must be at least 18 years old to use AlrightCupid."];
   }
-````
+```
 
 Finally, it gets the users'
 
