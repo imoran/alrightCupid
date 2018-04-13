@@ -42,8 +42,8 @@ class FormIndex extends React.Component {
           <textarea
             value={this.state.response}
             onChange={this.update('response')}
-            placeholder="Your Response" />
-
+            placeholder= {this.props.currentUser ? this.props.currentUser.description_responses[this.props.question.id - 1] : "Your Response"}>
+          </textarea>
           <br />
           <button onClick={this.handleCreate} type="submit">Write your Response</button>
           <button onClick={this.handleUpdate} type="submit">Edit your Response</button>

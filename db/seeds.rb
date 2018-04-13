@@ -420,7 +420,9 @@ description_question_3 = Description.create!(title: "I couldn't function without
 description_question_4 = Description.create!(title: "A perfect day")
 
 
-User.all.each do |user|
+users = User.all.select { |u| u.first_name != "demo_user" }
+
+User.each do |user|
   Question.all.each do |question|
     answer_id = question.answers.sample(1).pluck(:id)[0]
     QuestionResponse.create!(question_id: question.id, user_id: user.id, answer_id: answer_id)
@@ -443,14 +445,3 @@ User.all.each do |user|
     DescriptionResponse.create!(description_id: description.id, user_id: user.id, response: r)
   end
 end
-# {
-#   this.state.description_questions.map(question =>
-#     <div>
-#       <h1 key={question.id}>{question.title}</h1>
-#     </div>
-#   )
-# }
-
-# if (!this.props.description_responses) {
-#   return null
-# }

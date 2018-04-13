@@ -5,9 +5,12 @@ class Api::DescriptionResponsesController < ApplicationController
   end
 
   def create
-    @description_response = DescriptionResponse.create!(desc_params)
+    @description_response = DescriptionResponse.new(desc_params)
 
-    if @description_response.save
+
+    if @description_response.valid?
+      current_user.description_responses.where(description_id: params[:description_responses][:description_id]).destroy_all
+      @description_response.save
       render '/api/description_responses/show'
     else
       render json: @description_response.errors.full_messages, status: 422

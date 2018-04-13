@@ -1,14 +1,12 @@
 class Api::UsersController < ApplicationController
-  before_action :require_login
 
   def index
     #if params do query ajax otherwise:
     #near browse functionality
-    @users = User.all
     if params[:search]
       @users = User.search_by_name(params[:search])
     else
-      # @users = User.near("")
+      @users = User.all.select { |u| u.first_name != "demo_user" && u.first_name != current_user.first_name }
     end
     render '/api/users/index'
   end

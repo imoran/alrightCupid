@@ -31,15 +31,14 @@ class DashboardHeader extends React.Component {
   render() {
     return (
       <div className="dashboard-header">
-
         <div className="dashboard-header-group">
           <ul className="dashboard-header-left">
-            <li onClick={this.goHome}>Logo</li>
+            <a onClick={this.goHome}><img className="heart" src="https://i0.wp.com/www.followers.co.il/wp-content/uploads/2016/01/1-2.png?resize=720%2C720"/></a>
             <li onClick={this.browseMatches}>Browse Matches</li>
           </ul>
-
           <ul className="dashboard-header-right">
             <li onClick={this.goToProfilePage}>Profile</li>
+
             <li><button className="logout-button" onClick={this.logoutUser}>Logout</button></li>
           </ul>
         </div>

@@ -20,6 +20,18 @@
   z-index: 10;
 }
 
+.heart {
+  margin-left: 15px;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  top: 8px;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
 .dashboard-header-group {
   width: 100%;
   display: flex;
