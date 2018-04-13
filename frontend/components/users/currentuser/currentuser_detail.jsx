@@ -11,7 +11,7 @@ class CurrentUserDetail extends React.Component {
     this.state = {
       user: {},
       description_questions: [],
-      description_responses: {1: "", 2: "", 3: "", 4: ""}
+      description_responses: []
     };
     console.log("current User detail props =>", this.props);
 
@@ -61,15 +61,16 @@ class CurrentUserDetail extends React.Component {
 
         <div className="xx">
           <div className="user-description-questions">
-            <form onSubmit={this.handleSubmit}>
               {
                 this.state.description_questions.map(question =>
                   <div>
-                    <FormIndex question={question} currentUser={this.props.currentUser}/>
+                    <FormIndex question={question}
+                      currentUser={this.props.currentUser}
+                      createDescriptionResponse={this.props.createDescriptionResponse}
+                      updateDescriptionResponse={this.props.updateDescriptionResponse}/>
                   </div>
                 )
               }
-            </form>
           </div>
         </div>
         <DashboardFooter />

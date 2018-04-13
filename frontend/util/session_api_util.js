@@ -80,7 +80,15 @@ export const receiveAllDescriptionQuestions = () => {
 };
 
 
-export const postDescriptionResponses = (description_responses) => {
+export const updateDescriptionResponse = (description_response) => {
+  return $.ajax({
+    url: `/api/description_responses/${description_response.id}`,
+    method: 'PATCH',
+    data: { description_response }
+  });
+};
+
+export const postDescriptionResponse = (description_responses) => {
   return $.ajax({
     url: '/api/description_responses',
     method: 'POST',

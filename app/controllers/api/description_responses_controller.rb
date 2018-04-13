@@ -29,7 +29,6 @@ class Api::DescriptionResponsesController < ApplicationController
     render '/api/description_responses/show'
   end
 
-
   def desc_params
     params.require(:description_responses).permit(:description_id, :user_id, :response)
   end
