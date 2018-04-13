@@ -123,7 +123,7 @@ would be rendered
 ```
 
 The geocode gem is used to convert the zipcode (obtained from signin form)
-into latitude and longitude, which is then stored in the User table. This is then used to
+into latitude and longitude, which is stored in the User table. This is then used to
 generate the right location on the user's profile.
 
 
