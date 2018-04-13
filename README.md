@@ -53,7 +53,7 @@ All of this information is being passed as part of the signup slice of the state
 
 Custom error messages are displayed when information is missing.
 
-![signup_errors](https://github.com/imoran/alrightCupid/upload)
+![signup_errors](https://github.com/imoran/alrightCupid/blob/master/errors.png)
 
 ```javascript
   // all errors are kept in local state and when any of the categories are missing,
