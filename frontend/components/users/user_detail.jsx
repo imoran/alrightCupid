@@ -14,6 +14,7 @@ class UserDetail extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.receiveAllDescriptionQuestions()
     .then(question => {
       this.setState({ description_questions: this.props.description_questions,

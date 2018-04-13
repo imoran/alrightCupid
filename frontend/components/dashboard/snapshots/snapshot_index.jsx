@@ -6,7 +6,6 @@ import { withRouter } from 'react-router-dom';
 class SnapshotIndex extends React.Component {
   componentDidMount() {
     this.props.requestAllUsers();
-    // .then(() => console.log("Snapshot index props =>", this.props));
   }
 
   userProfile(id) {
@@ -29,12 +28,12 @@ class SnapshotIndex extends React.Component {
       <div className="snapshots-carousel">
         <h1>Snapshots</h1>
         <Slider {...settings}>
-            {users.map((el, idx) => (
+            {users.map((user, idx) => (
               <div className="snapshot-slider" key={idx}
-                onClick={this.userProfile(el.id)}>
-                <h3><img src={el.image_url} /></h3>
+                onClick={this.userProfile(user.id)}>
+                <h3><img src={user.image_url} /></h3>
                 <div className="snapshot-caption">
-                  <p>{el.motto}</p>
+                  <p>{user.motto}</p>
                 </div>
               </div>
             ))}

@@ -422,7 +422,7 @@ description_question_4 = Description.create!(title: "A perfect day")
 
 users = User.all.select { |u| u.first_name != "demo_user" }
 
-User.each do |user|
+users.each do |user|
   Question.all.each do |question|
     answer_id = question.answers.sample(1).pluck(:id)[0]
     QuestionResponse.create!(question_id: question.id, user_id: user.id, answer_id: answer_id)
@@ -439,7 +439,7 @@ random = ["The secret of happiness is total disregard of everybody.", "Intoleran
 "Listening to both sides of a story will convince you that there is more to a story than both sides.",
 "Maybe we're the fools, for thinking we know things. Maybe humans are the only ones who can deal with the fact that nothing can ever be known at all."]
 
-User.all.each do |user|
+users.each do |user|
   Description.all.each do |description|
     r = random.sample
     DescriptionResponse.create!(description_id: description.id, user_id: user.id, response: r)

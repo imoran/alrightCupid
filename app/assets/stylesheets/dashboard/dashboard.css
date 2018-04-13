@@ -130,10 +130,6 @@ a:hover {
   /* box-shadow: 0px 1px 1px 1px #e2dede; */
 }
 
-.dashboard-question-box p {
-
-}
-
 /* ======== Dashboard Snapshots ========= */
 
 /* .snapshots-carousel h1 {
@@ -171,6 +167,12 @@ a:hover {
   width: 160px;
   text-align: center;
 }
+
+.snapshot-caption div {
+  text-align: center;
+
+}
+
 
 
 /* ======== Dashboard Footer ========= */
