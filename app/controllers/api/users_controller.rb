@@ -1,8 +1,6 @@
 class Api::UsersController < ApplicationController
 
   def index
-    #if params do query ajax otherwise:
-    #near browse functionality
     if params[:search]
       @users = User.search_by_name(params[:search])
     else

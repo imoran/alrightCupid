@@ -43,7 +43,7 @@ class User < ApplicationRecord
     self.geocode
     self.save!
   end
-  
+
   def get_city
     return self.city if self.city
     return "city" unless valid_location?
@@ -51,7 +51,6 @@ class User < ApplicationRecord
     self.city = Geocoder.search(geo_localization).first.city
     self.save!
   end
-
 
   def valid_location?
     self.latitude && self.longitude
