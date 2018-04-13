@@ -19,7 +19,6 @@ export default class Dashboard extends React.Component {
         <FeaturedContainer />
         <div className="dashboard-main-body">
           <SnapshotIndexContainer />
-          <QuestionsIndexContainer />
         </div>
         <DashboardFooter />
       </div>

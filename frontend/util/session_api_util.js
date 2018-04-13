@@ -21,7 +21,8 @@ export const logout = () => {
   });
 };
 
-export const getAllUsers = () => {
+export const getAllUsers = (userHash) => {
+  let url = '/api/users/?&';
   return $.ajax({
     url: '/api/users',
     method: 'GET'
@@ -34,28 +35,6 @@ export const getOneUser = id => {
     method: 'GET'
   });
 };
-
-// export const postQuestionAnswer = (formResponse) => {
-//   return $.ajax({
-//     url: '/api/responses',
-//     method: 'POST',
-//     data: {
-//       formResponse
-//       //formResponse needs:
-//       {
-//         question_id:
-//         response:
-//
-//       }
-//     }
-//   });
-// };
-
-// export const getAllResponses = () => {
-//   return $.ajax({
-//     url:
-//   })
-// }
 
 export const getAllQuestionAnswers = () => {
   return $.ajax({

@@ -1,6 +1,5 @@
 class Api::UsersController < ApplicationController
-  #hooks to protect against accessing data api endpoints
-  # before_action :require_login
+  before_action :require_login
 
   def index
     #if params do query ajax otherwise:
@@ -8,6 +7,8 @@ class Api::UsersController < ApplicationController
     @users = User.all
     if params[:search]
       @users = User.search_by_name(search_params[:search_query])
+    else
+      # @users = User.near("")
     end
     render '/api/users/index'
   end

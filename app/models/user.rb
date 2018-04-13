@@ -34,9 +34,6 @@ class User < ApplicationRecord
   end
 
   def self.search_by_name(name)
-    p "================="
-    p name
-    p "================="
     search_name = "%#{name.downcase}%"
     User.where('LOWER(first_name) LIKE ?', search_name)
   end
@@ -46,14 +43,7 @@ class User < ApplicationRecord
     self.geocode
     self.save!
   end
-
-
-  #
-  # def get_query
-  #   geo_localization = "#{self.latitude}, #{self.longitude}"
-  #   query = Geocoder.search(geo_localization).first
-  # end
-  #
+  
   def get_city
     return self.city if self.city
     return "city" unless valid_location?

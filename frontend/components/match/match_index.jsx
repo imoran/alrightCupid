@@ -24,15 +24,19 @@ class MatchIndex extends React.Component {
     let { users } = this.props;
     return (
       <div className="match">
-        <DashboardHeaderContainer /> 
+        <DashboardHeaderContainer />
         <div className="match-main">
           <div className="match-main-group">
             {users.map((el, idx) =>
               <div key={idx} className="match-user"
                 onClick={this.userProfile(el.id)}>
                 <img src={el.image_url}></img>
-
-                {el.first_name}
+                <div className="match-description">
+                  <div className="match-first-name">
+                    <p>{el.first_name}</p>
+                  </div>
+                  <p className="match-first-location">{el.age} {el.city}, {el.state}</p>
+                </div>
               </div>
             )}
           </div>

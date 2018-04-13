@@ -32,16 +32,18 @@ class FormIndex extends React.Component {
     this.props.updateDescriptionResponse(updatePost);
   }
 
+
   render() {
     return (
       <div>
-        <form>
+        <form className="description-form">
           <label className="description-label">{this.props.question.title}</label>
           <br />
           <textarea
             value={this.state.response}
             onChange={this.update('response')}
-            placeholder={this.state.response} />
+            placeholder="Your Response" />
+
           <br />
           <button onClick={this.handleCreate} type="submit">Write your Response</button>
           <button onClick={this.handleUpdate} type="submit">Edit your Response</button>

@@ -5,7 +5,18 @@
   font-weight: bold;
 }
 
-.description-label textarea {
-  height: 300px;
+.description-form textarea {
+  height: 50px;
   width: 360px;
+  border: none;
+  font-size: 15px;
+}
+
+.description-form button {
+  border: 1px solid #00d280;
+  color: #00d280;
+  border-radius: 20px;
+  padding: 6px 24px;
+  margin: 18px;
+  font-size: 15px;
 }

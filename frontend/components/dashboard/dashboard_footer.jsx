@@ -5,7 +5,7 @@ class DashboardFooter extends React.Component {
   render() {
     return (
       <div className="dashboard-footer">
-        Footer
+        
       </div>
     );
   }

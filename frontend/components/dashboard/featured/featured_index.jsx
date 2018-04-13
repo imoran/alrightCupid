@@ -26,6 +26,12 @@ class FeaturedIndex extends React.Component {
     const { users } = this.props;
     return (
       <div className="dashboard-featured">
+        <div className="dashboard-featured-top">
+          <h2>Featured</h2>
+          <input
+            placeholder="what are you into?"
+            ></input>
+        </div>
         <div className="featured-carousel">
           <Slider {...settings}>
             {users.map((el, idx) => (
