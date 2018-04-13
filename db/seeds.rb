@@ -21,7 +21,7 @@ User.create!([{
     orientation: 'Other',
     location: 'United States',
     age: 27,
-    image_url: 'https://images.pexels.com/photos/818654/pexels-photo-818654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    image_url: 'http://i.imgur.com/hfH9CiC.png',
     password: 'password',
     motto: 'Pretending I know what I\'m doing'
   },
