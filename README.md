@@ -150,7 +150,7 @@ generate the right location on the user's profile.
     end
 
 
-    // all the methods
+    // all the methods required to obtain a users' city and state
     def get_city
       return self.city if self.city
       return "city" unless valid_location?
