@@ -122,29 +122,58 @@ would be rendered
   }
 ```
 
+The geocode gem is used to convert the zipcode (obtained from signin form)
+into latitude and longitude, which is then stored in the User table. This is then used to
+generate the right location on the user's profile.
 
 
+```javascript
+
+  //I obtain the zipcode from the user and then before validating, I make sure to geocode the zipcode, which
+  //is seen in this code snippet.
+  class User < ApplicationRecord
+    validates :username, :first_name, :password_digest, :session_token, presence: true
+    validates :zipcode, presence: true
+    geocoded_by :zipcode
+    before_validation :ensure_session_token, :geocode
+    after_initialize :ensure_geocode
+
+    has_many :question_responses
+    has_many :description_responses
+
+    attr_reader :password
+
+    def ensure_geocode
+      return if valid_location?
+      self.geocode
+      self.save!
+    end
 
 
+    // all the methods
+    def get_city
+      return self.city if self.city
+      return "city" unless valid_location?
+      geo_localization = "#{self.latitude}, #{self.longitude}"
+      self.city = Geocoder.search(geo_localization).first.city
+      self.save!
+    end
 
+    def valid_location?
+      self.latitude && self.longitude
+    end
 
+    def get_state
+      return "state" unless self.valid_location?
+      return self.state if self.state
+      geo_localization = "#{self.latitude}, #{self.longitude}"
+      self.state = Geocoder.search(geo_localization).first.state
+      self.save!
+    end
+  end
+```
 
+## Future Direction:
 
-
-
-
-
-- [ ] Links to the Wiki design documents
-- [ ] Describes technologies used
-- [ ] Describes core functionality
-- [ ] Lists future directions
-- [ ] Fills out `Description` and `Website` at the top of the repo.
-
-**Format:**
-- [ ] Uses markdown formatting
-- [ ] Includes code snippets (with triple backticks, and the language ` ```javascript...``` `)
-- [ ] Includes screenshots / gifs
-
-**Optional:**
-- [ ] Describes technical challenges
-- [ ] Add `topics` to the top of the repo
+I plan to use the geocode functionality to be able to search users who are closest to the current User. Also, I'd
+like to give the user the option to upload pictures and possibly have the ability to message other users.

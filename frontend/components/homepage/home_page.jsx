@@ -33,7 +33,6 @@ export default class HomePage extends React.Component {
   }
 
   multiStep() {
-    // let color = COLOR[this.state.currentIndex];
     let color = "#24d8f3";
     switch (this.state.step) {
       case 1:
@@ -53,7 +52,6 @@ export default class HomePage extends React.Component {
       default:
         break;
     }
-
   }
 
   nextStep() {
