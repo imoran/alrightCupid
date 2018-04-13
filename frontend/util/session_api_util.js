@@ -43,6 +43,14 @@ export const getAllQuestionAnswers = () => {
   });
 };
 
+export const searchUsers = name => {
+  let url = `/api/users/?&search=${name}`;
+  return $.ajax({
+    url: url,
+    method: 'GET',
+  });
+};
+
 
 export const getAllQuestions = () => {
   return $.ajax({

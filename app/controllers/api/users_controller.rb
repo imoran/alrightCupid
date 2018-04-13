@@ -6,7 +6,7 @@ class Api::UsersController < ApplicationController
     #near browse functionality
     @users = User.all
     if params[:search]
-      @users = User.search_by_name(search_params[:search_query])
+      @users = User.search_by_name(params[:search])
     else
       # @users = User.near("")
     end
@@ -38,11 +38,4 @@ class Api::UsersController < ApplicationController
   def search_params
     params.require(:search).permit(:search_query)
   end
-
-  # params: {
-  #   search: {
-  #     search_query: "Melissa"
-  #   }
-  # }
-
 end
