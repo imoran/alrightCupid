@@ -8,7 +8,7 @@ export default class Splash extends React.Component {
           <span>Dating Deserves Better</span>
         </h1>
         <div>
-          On OkCupid, you’re more than just a photo.
+          On alrightCupid, you’re more than just a photo.
           You have stories to tell, and passions to share,
           and things to talk about that are more interesting
           than the weather. Get noticed for who you are, not
