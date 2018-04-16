@@ -5,7 +5,6 @@ import merge from 'lodash/merge';
 class FormIndex extends React.Component {
   constructor(props) {
     super(props);
-    console.log("Form Index props =>", this.props);
     this.state = {
       response: ''
     };

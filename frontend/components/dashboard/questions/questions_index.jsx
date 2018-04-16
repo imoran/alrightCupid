@@ -17,15 +17,6 @@ class QuestionsIndex extends React.Component {
     .then(() => {
       this.setState({questions: this.props.questions });
     });
-    console.log("QUESTIONS INDEX STÅTE", this.state);
-  }
-
-  yes(e) {
-    console.log("yes ");
-  }
-
-  no(e) {
-    console.log("no ");
   }
 
   render() {

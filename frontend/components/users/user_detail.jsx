@@ -33,7 +33,6 @@ class UserDetail extends React.Component {
   }
 
   render() {
-    console.log("USER DETAIL PROPS", this.props);
     let { user } = this.state;
     let { currentUser } = this.state;
     return (

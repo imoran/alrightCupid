@@ -5,7 +5,6 @@ import merge from 'lodash/merge';
 class SigninForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
     this.state = {
       username: '',
       password: ''

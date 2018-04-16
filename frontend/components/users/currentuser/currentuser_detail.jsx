@@ -13,8 +13,6 @@ class CurrentUserDetail extends React.Component {
       description_questions: [],
       description_responses: []
     };
-    console.log("current User detail props =>", this.props);
-
   }
 
   componentDidMount() {
