@@ -2,7 +2,7 @@
 
 [alrightCupid](https://alrightcupid.herokuapp.com/#/)
 
-alrightCupid is a clone of the popular dating website, OKCupid. It has a Ruby on Rails/PostgreSQl backend and a React/Redux frontend.
+alrightCupid is a clone of the popular dating website, OKCupid. It has a Ruby on Rails/PostgreSQL backend and a React/Redux frontend.
 
 ## Features
 
