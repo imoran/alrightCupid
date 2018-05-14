@@ -12844,7 +12844,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.logout = exports.signin = exports.signup = exports.searchUser = exports.receiveErrors = exports.receiveCurrentUser = exports.RECEIVE_SEARCH_TERM = exports.RECEIVE_SESSION_ERRORS = exports.RECEIVE_CURRENT_USER = undefined;
 
-var _session_api_util = __webpack_require__(13);
+var _session_api_util = __webpack_require__(12);
 
 var APIUtil = _interopRequireWildcard(_session_api_util);
 
@@ -13021,33 +13021,6 @@ if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' 
 
 /***/ }),
 /* 12 */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13140,7 +13113,7 @@ var postDescriptionResponse = exports.postDescriptionResponse = function postDes
 };
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13151,7 +13124,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.requestSingleUser = exports.requestAllUsers = exports.receiveSingleUser = exports.receiveAllUsers = exports.RECEIVE_SINGLE_USER = exports.RECEIVE_ALL_USERS = undefined;
 
-var _session_api_util = __webpack_require__(13);
+var _session_api_util = __webpack_require__(12);
 
 var APIUtil = _interopRequireWildcard(_session_api_util);
 
@@ -13191,7 +13164,7 @@ var requestSingleUser = exports.requestSingleUser = function requestSingleUser(i
 };
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var freeGlobal = __webpack_require__(82);
@@ -13206,7 +13179,7 @@ module.exports = root;
 
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports) {
 
 /**
@@ -13241,7 +13214,7 @@ module.exports = isObjectLike;
 
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13338,7 +13311,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13396,6 +13369,33 @@ function invariant(condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
 
 /***/ }),
 /* 19 */
@@ -14892,7 +14892,7 @@ module.exports = getMapData;
 
 
 if (process.env.NODE_ENV !== 'production') {
-  var invariant = __webpack_require__(18);
+  var invariant = __webpack_require__(17);
   var warning = __webpack_require__(23);
   var ReactPropTypesSecret = __webpack_require__(38);
   var loggedTypeFailures = {};
@@ -15843,7 +15843,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.receiveAllDescriptionQuestions = exports.receiveAllDescriptions = exports.RECEIVE_ALL_DESCRIPTION_QUESTIONS = undefined;
 
-var _session_api_util = __webpack_require__(13);
+var _session_api_util = __webpack_require__(12);
 
 var APIUtil = _interopRequireWildcard(_session_api_util);
 
@@ -17531,7 +17531,7 @@ module.exports = arrayLikeKeys;
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIsArguments = __webpack_require__(191),
-    isObjectLike = __webpack_require__(16);
+    isObjectLike = __webpack_require__(15);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -17572,7 +17572,7 @@ module.exports = isArguments;
 /* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(15);
+var root = __webpack_require__(14);
 
 /** Built-in value references. */
 var Symbol = root.Symbol;
@@ -17589,7 +17589,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 module.exports = freeGlobal;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18)))
 
 /***/ }),
 /* 83 */
@@ -17627,7 +17627,7 @@ module.exports = isArray;
 /* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(15),
+/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(14),
     stubFalse = __webpack_require__(194);
 
 /** Detect free variable `exports`. */
@@ -17806,7 +17806,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.receiveQuestions = exports.receiveAllQuestions = exports.RECEIVE_ALL_QUESTIONS = undefined;
 
-var _session_api_util = __webpack_require__(13);
+var _session_api_util = __webpack_require__(12);
 
 var APIUtil = _interopRequireWildcard(_session_api_util);
 
@@ -17841,7 +17841,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.postResponse = exports.createAResponse = exports.CREATE_RESPONSE = undefined;
 
-var _session_api_util = __webpack_require__(13);
+var _session_api_util = __webpack_require__(12);
 
 var APIUtil = _interopRequireWildcard(_session_api_util);
 
@@ -17945,7 +17945,7 @@ module.exports = isIterateeCall;
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(55),
-    root = __webpack_require__(15);
+    root = __webpack_require__(14);
 
 /* Built-in method references that are verified to be native. */
 var Map = getNative(root, 'Map');
@@ -18106,7 +18106,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.updateDescriptionResponse = exports.createDescriptionResponse = exports.receiveSingleDescriptionResponse = exports.receiveAllDescriptionResponses = exports.RECEIVE_ONE_DESCRIPTION_RESPONSE = exports.RECEIVE_ALL_DESCRIPTION_RESPONSES = undefined;
 
-var _session_api_util = __webpack_require__(13);
+var _session_api_util = __webpack_require__(12);
 
 var APIUtil = _interopRequireWildcard(_session_api_util);
 
@@ -18198,7 +18198,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * LICENSE file in the root directory of this source tree.
  */
 
-var m=__webpack_require__(17),n=__webpack_require__(22),p=__webpack_require__(10),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.portal"):60106,u=q?Symbol["for"]("react.fragment"):60107,v=q?Symbol["for"]("react.strict_mode"):60108,w=q?Symbol["for"]("react.provider"):60109,x=q?Symbol["for"]("react.context"):60110,y=q?Symbol["for"]("react.async_mode"):60111,z=q?Symbol["for"]("react.forward_ref"):60112,A="function"===
+var m=__webpack_require__(16),n=__webpack_require__(22),p=__webpack_require__(10),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.portal"):60106,u=q?Symbol["for"]("react.fragment"):60107,v=q?Symbol["for"]("react.strict_mode"):60108,w=q?Symbol["for"]("react.provider"):60109,x=q?Symbol["for"]("react.context"):60110,y=q?Symbol["for"]("react.async_mode"):60111,z=q?Symbol["for"]("react.forward_ref"):60112,A="function"===
 typeof Symbol&&Symbol.iterator;function B(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,c=0;c<b;c++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[c+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var C={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function D(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||C}D.prototype.isReactComponent={};D.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?B("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};D.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};function E(){}
 E.prototype=D.prototype;function F(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||C}var G=F.prototype=new E;G.constructor=F;m(G,D.prototype);G.isPureReactComponent=!0;var H={current:null},I=Object.prototype.hasOwnProperty,J={key:!0,ref:!0,__self:!0,__source:!0};
@@ -18235,9 +18235,9 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var _assign = __webpack_require__(17);
+var _assign = __webpack_require__(16);
 var emptyObject = __webpack_require__(22);
-var invariant = __webpack_require__(18);
+var invariant = __webpack_require__(17);
 var warning = __webpack_require__(23);
 var emptyFunction = __webpack_require__(10);
 var checkPropTypes = __webpack_require__(37);
@@ -19771,9 +19771,9 @@ function createProvider() {
 
 
 var emptyFunction = __webpack_require__(10);
-var invariant = __webpack_require__(18);
+var invariant = __webpack_require__(17);
 var warning = __webpack_require__(23);
-var assign = __webpack_require__(17);
+var assign = __webpack_require__(16);
 
 var ReactPropTypesSecret = __webpack_require__(38);
 var checkPropTypes = __webpack_require__(37);
@@ -20321,7 +20321,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 
 var emptyFunction = __webpack_require__(10);
-var invariant = __webpack_require__(18);
+var invariant = __webpack_require__(17);
 var ReactPropTypesSecret = __webpack_require__(38);
 
 module.exports = function() {
@@ -20719,7 +20719,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 /* harmony default export */ __webpack_exports__["a"] = (freeGlobal);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(12)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(18)))
 
 /***/ }),
 /* 115 */
@@ -20902,7 +20902,7 @@ if (typeof self !== 'undefined') {
 var result = Object(__WEBPACK_IMPORTED_MODULE_0__ponyfill_js__["a" /* default */])(root);
 /* harmony default export */ __webpack_exports__["a"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(12), __webpack_require__(121)(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(18), __webpack_require__(121)(module)))
 
 /***/ }),
 /* 121 */
@@ -24747,7 +24747,7 @@ var _featured_index = __webpack_require__(161);
 
 var _featured_index2 = _interopRequireDefault(_featured_index);
 
-var _user_actions = __webpack_require__(14);
+var _user_actions = __webpack_require__(13);
 
 var _selectors = __webpack_require__(49);
 
@@ -25897,7 +25897,7 @@ var InnerSlider = exports.InnerSlider = function (_React$Component) {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var ba=__webpack_require__(0),m=__webpack_require__(74),A=__webpack_require__(17),C=__webpack_require__(10),ea=__webpack_require__(75),fa=__webpack_require__(76),ha=__webpack_require__(77),ja=__webpack_require__(22);
+var ba=__webpack_require__(0),m=__webpack_require__(74),A=__webpack_require__(16),C=__webpack_require__(10),ea=__webpack_require__(75),fa=__webpack_require__(76),ha=__webpack_require__(77),ja=__webpack_require__(22);
 function D(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}ba?void 0:D("227");
 function ka(a,b,c,d,e,f,h,g,k){this._hasCaughtError=!1;this._caughtError=null;var v=Array.prototype.slice.call(arguments,3);try{b.apply(c,v)}catch(l){this._caughtError=l,this._hasCaughtError=!0}}
 var E={_caughtError:null,_hasCaughtError:!1,_rethrowError:null,_hasRethrowError:!1,invokeGuardedCallback:function(a,b,c,d,e,f,h,g,k){ka.apply(E,arguments)},invokeGuardedCallbackAndCatchFirstError:function(a,b,c,d,e,f,h,g,k){E.invokeGuardedCallback.apply(this,arguments);if(E.hasCaughtError()){var v=E.clearCaughtError();E._hasRethrowError||(E._hasRethrowError=!0,E._rethrowError=v)}},rethrowCaughtError:function(){return ma.apply(E,arguments)},hasCaughtError:function(){return E._hasCaughtError},clearCaughtError:function(){if(E._hasCaughtError){var a=
@@ -26211,10 +26211,10 @@ if (process.env.NODE_ENV !== "production") {
 'use strict';
 
 var React = __webpack_require__(0);
-var invariant = __webpack_require__(18);
+var invariant = __webpack_require__(17);
 var warning = __webpack_require__(23);
 var ExecutionEnvironment = __webpack_require__(74);
-var _assign = __webpack_require__(17);
+var _assign = __webpack_require__(16);
 var emptyFunction = __webpack_require__(10);
 var checkPropTypes = __webpack_require__(37);
 var getActiveElement = __webpack_require__(75);
@@ -43393,7 +43393,7 @@ function toNumber(value) {
 
 module.exports = debounce;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18)))
 
 /***/ }),
 /* 174 */
@@ -44886,7 +44886,7 @@ var index = (function () {
 
 /* harmony default export */ __webpack_exports__["default"] = (index);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(12)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(18)))
 
 /***/ }),
 /* 178 */
@@ -45557,7 +45557,7 @@ module.exports = baseTimes;
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(21),
-    isObjectLike = __webpack_require__(16);
+    isObjectLike = __webpack_require__(15);
 
 /** `Object#toString` result references. */
 var argsTag = '[object Arguments]';
@@ -45686,7 +45686,7 @@ module.exports = stubFalse;
 
 var baseGetTag = __webpack_require__(21),
     isLength = __webpack_require__(87),
-    isObjectLike = __webpack_require__(16);
+    isObjectLike = __webpack_require__(15);
 
 /** `Object#toString` result references. */
 var argsTag = '[object Arguments]',
@@ -45856,7 +45856,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _reactRedux = __webpack_require__(2);
 
-var _user_actions = __webpack_require__(14);
+var _user_actions = __webpack_require__(13);
 
 var _selectors = __webpack_require__(49);
 
@@ -46926,7 +46926,7 @@ module.exports = toNumber;
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(21),
-    isObjectLike = __webpack_require__(16);
+    isObjectLike = __webpack_require__(15);
 
 /** `Object#toString` result references. */
 var symbolTag = '[object Symbol]';
@@ -47687,7 +47687,7 @@ module.exports = isMasked;
 /* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(15);
+var root = __webpack_require__(14);
 
 /** Used to detect overreaching core-js shims. */
 var coreJsData = root['__core-js_shared__'];
@@ -48261,7 +48261,7 @@ module.exports = baseMergeDeep;
 /* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(15);
+/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(14);
 
 /** Detect free variable `exports`. */
 var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
@@ -48347,7 +48347,7 @@ module.exports = cloneArrayBuffer;
 /* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(15);
+var root = __webpack_require__(14);
 
 /** Built-in value references. */
 var Uint8Array = root.Uint8Array;
@@ -48446,7 +48446,7 @@ module.exports = baseCreate;
 /***/ (function(module, exports, __webpack_require__) {
 
 var isArrayLike = __webpack_require__(29),
-    isObjectLike = __webpack_require__(16);
+    isObjectLike = __webpack_require__(15);
 
 /**
  * This method is like `_.isArrayLike` except that it also checks if `value`
@@ -48486,7 +48486,7 @@ module.exports = isArrayLikeObject;
 
 var baseGetTag = __webpack_require__(21),
     getPrototype = __webpack_require__(96),
-    isObjectLike = __webpack_require__(16);
+    isObjectLike = __webpack_require__(15);
 
 /** `Object#toString` result references. */
 var objectTag = '[object Object]';
@@ -49494,7 +49494,7 @@ var _match_index = __webpack_require__(280);
 
 var _match_index2 = _interopRequireDefault(_match_index);
 
-var _user_actions = __webpack_require__(14);
+var _user_actions = __webpack_require__(13);
 
 var _selectors = __webpack_require__(49);
 
@@ -49650,7 +49650,7 @@ var _user_detail = __webpack_require__(282);
 
 var _user_detail2 = _interopRequireDefault(_user_detail);
 
-var _user_actions = __webpack_require__(14);
+var _user_actions = __webpack_require__(13);
 
 var _description_actions = __webpack_require__(57);
 
@@ -49848,7 +49848,7 @@ var _currentuser_detail = __webpack_require__(284);
 
 var _currentuser_detail2 = _interopRequireDefault(_currentuser_detail);
 
-var _user_actions = __webpack_require__(14);
+var _user_actions = __webpack_require__(13);
 
 var _description_actions = __webpack_require__(57);
 
@@ -50529,7 +50529,7 @@ var _merge2 = __webpack_require__(7);
 
 var _merge3 = _interopRequireDefault(_merge2);
 
-var _user_actions = __webpack_require__(14);
+var _user_actions = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
