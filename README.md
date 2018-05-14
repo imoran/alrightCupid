@@ -13,7 +13,7 @@ alrightCupid is a clone of the popular dating website, OKCupid. It has a Ruby on
  * Users' locations are generated from their zipcode using Geocode
 
 
-![splash](https://github.com/imoran/alrightCupid/blob/master/splash.png)
+![splash](https://github.com/imoran/alrightCupid/blob/master/aC_splash.png)
 
 Sign Up/Sign In functionalities are made possible by BCrypt.
 
